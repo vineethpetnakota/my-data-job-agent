@@ -1,40 +1,40 @@
-name: 24-7 hourly hunter
+name: Data Job Hunter
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Runs automatically every hour
-  workflow_dispatch:     # Creates the "Run workflow" button for manual hunts
-
-permissions:
-  contents: write        # Essential: Gives the bot permission to save jobs.json
+    # Runs at 17 minutes past every hour to avoid GitHub's peak traffic
+    - cron: '17 * * * *'
+  workflow_dispatch: # Allows you to run it manually anytime
 
 jobs:
-  hunt:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Crucial: Allows the bot to save jobs.json
+
     steps:
-      - name: Checkout Repository
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/checkout@v4
         with:
           python-version: '3.10'
 
       - name: Install Dependencies
         run: |
-          python -m pip install --upgrade pip
           pip install google-genai requests
 
       - name: Run Job Agent
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          SERPER_KEY: ${{ secrets.SERPER_API_KEY }}
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
         run: python hunter.py
 
       - name: Commit and Push Results
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "actions@github.com"
           git add jobs.json
-          # Only commit if there are actually changes to avoid errors
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Automated Hunt: Updated jobs.json" && git push)
+          # Only commit if there are changes to avoid errors
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update jobs: $(date)" && git push)
