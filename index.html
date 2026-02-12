@@ -3,23 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Data Job Hunter</title>
+    <title>Senior Data Job Hunter (5-8 Years)</title>
     <style>
         :root { --bg: #0a0a0a; --card: #161616; --accent: #00ff88; --text: #eee; --secondary: #888; }
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
+        
+        /* Status Bar Styles */
         .status-bar { display: flex; align-items: center; justify-content: space-between; background: var(--card); padding: 15px 25px; border-radius: 12px; border: 1px solid #333; width: 100%; max-width: 700px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
         .pulse { height: 10px; width: 10px; background: var(--accent); border-radius: 50%; display: inline-block; box-shadow: 0 0 10px var(--accent); animation: pulse 2s infinite; margin-right: 10px; }
-        @keyframes pulse { 0% { opacity: 0.4; } 50% { opacity: 1; } 100% { opacity: 0.4; } }
+        @keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+        
         .count-badge { background: #222; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; color: var(--accent); border: 1px solid #444; font-weight: bold; }
         .refresh-btn { text-decoration: none; background: #222; color: #fff; padding: 8px 15px; border-radius: 6px; font-size: 0.8rem; border: 1px solid #444; transition: 0.3s; }
         .refresh-btn:hover { background: #333; border-color: var(--accent); }
+
+        /* Job Grid Styles */
         #job-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; width: 100%; max-width: 1100px; }
-        .job-card { background: var(--card); padding: 20px; border-radius: 12px; border: 1px solid #333; position: relative; transition: transform 0.2s; }
-        .job-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .job-card { background: var(--card); padding: 25px; border-radius: 12px; border: 1px solid #333; position: relative; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .job-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,255,136,0.1); }
+        
         .score { position: absolute; top: 15px; right: 15px; font-size: 0.7rem; color: var(--accent); font-weight: bold; border: 1px solid var(--accent); padding: 2px 6px; border-radius: 4px; }
-        .company-name { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 5px; display: block; }
-        .apply-btn { display: block; text-align: center; margin-top: 15px; background: var(--accent); color: #000; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: bold; font-size: 0.9rem; }
-        h1 { margin-bottom: 10px; letter-spacing: -1px; }
+        .company-name { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 8px; display: block; text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* Experience Badge */
+        .exp-badge { display: inline-block; background: #222; color: #aaa; font-size: 0.75rem; padding: 4px 10px; border-radius: 6px; border: 1px solid #444; margin-bottom: 15px; }
+        
+        .apply-btn { display: block; text-align: center; margin-top: 20px; background: var(--accent); color: #000; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: bold; font-size: 0.9rem; transition: 0.2s; }
+        .apply-btn:hover { background: #00cc6e; transform: scale(1.02); }
+        
+        h1 { margin-bottom: 10px; letter-spacing: -1.5px; font-size: 2.5rem; }
     </style>
 </head>
 <body>
@@ -34,14 +46,15 @@
             <a href="https://github.com/vineethpetnakota/my-data-job-agent/actions" target="_blank" class="refresh-btn">🔄 Force Hunt</a>
         </div>
     </div>
-    <div id="job-list">Scanning the horizon for opportunities...</div>
+    
+    <div id="job-list">Scanning for 5-8 year senior roles...</div>
 
     <script>
         const username = "vineethpetnakota";
         const repo = "my-data-job-agent"; 
 
         async function init() {
-            // 1. Get Last Sync Time from GitHub API
+            // 1. Get real update time from GitHub Commit History
             try {
                 const res = await fetch(`https://api.github.com/repos/${username}/${repo}/commits?path=jobs.json&per_page=1`);
                 const commits = await res.json();
@@ -49,18 +62,18 @@
                     const d = new Date(commits[0].commit.committer.date);
                     document.getElementById('update-time').innerText = "Last Hunt: " + d.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
                 }
-            } catch(e) { console.error("Time sync failed"); }
+            } catch(e) { console.error("Update time fetch failed"); }
 
-            // 2. Load Jobs & Update Count
+            // 2. Load Jobs from JSON (with Cache Busting)
             try {
-                const res = await fetch('jobs.json?v=' + Date.now()); // Cache-busting
+                const res = await fetch('jobs.json?v=' + Date.now()); 
                 const jobs = await res.json();
                 
                 document.getElementById('job-count').innerText = `${jobs.length} Jobs Found`;
-                
                 const list = document.getElementById('job-list');
+                
                 if(!jobs.length) {
-                    list.innerHTML = "<div style='grid-column: 1/-1; text-align: center; color: #666;'><p>No matches in the current hunt. Expand your criteria or try a Force Hunt.</p></div>";
+                    list.innerHTML = "<div style='grid-column: 1/-1; text-align: center; color: #666; margin-top: 50px;'><p>No 5-8yr matches found in the last hunt.<br>Try a <b>Force Hunt</b> to trigger a fresh search.</p></div>";
                     return;
                 }
                 
@@ -68,12 +81,13 @@
                     <div class="job-card">
                         <span class="score">${j.score}% Match</span>
                         <span class="company-name">${j.company}</span>
-                        <h3 style="margin: 5px 0 15px 0;">${j.title}</h3>
+                        <h3 style="margin: 5px 0 15px 0; font-size: 1.2rem;">${j.title}</h3>
+                        <div class="exp-badge">🕒 ${j.experience || '5-8 Years'}</div>
                         <a href="${j.url}" target="_blank" class="apply-btn">Apply Now</a>
                     </div>
                 `).join('');
             } catch(e) { 
-                document.getElementById('job-list').innerHTML = "Ready for your first hunt! Click 'Force Hunt' to begin."; 
+                document.getElementById('job-list').innerHTML = "Ready for the first hunt! Go to Actions and click 'Run Workflow'."; 
             }
         }
         init();
