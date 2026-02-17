@@ -8,24 +8,40 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # This explicitly tells GitHub this job can write to your repo
     permissions:
       contents: write
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          # This setting ensures the GITHUB_TOKEN is used for subsequent git commands
+          persist-credentials: true 
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - run: pip install google-genai requests
+
+      - name: Install Dependencies
+        run: pip install google-genai requests
+
       - name: Run Job Agent
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
         run: python hunter.py
-      - name: Force Commit
+
+      - name: Commit and Push Results
         run: |
-          git config --global user.name "JobBot"
-          git config --global user.email "bot@github.com"
-          echo "$(date)" > heartbeat.txt
-          git add .
-          git commit -m "Total Reset: $(date)" || echo "No changes"
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Force an update even if jobs.json didn't change
+          echo "Last hunt: $(date)" > heartbeat.txt
+          
+          git add jobs.json heartbeat.txt
+          # The '|| echo' prevents the workflow from failing if there are no changes
+          git commit -m "Hourly Hunt Sync: $(date)" || echo "No changes to commit"
           git push
