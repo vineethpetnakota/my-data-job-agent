@@ -1,38 +1,26 @@
 name: Senior Data Job Bot
-
 on:
-  workflow_dispatch: # Allows manual trigger
-
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Granting permission to push code
-
+      contents: write
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }} # Use internal token for auth
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-
-      - name: Install Dependencies
-        run: pip install google-genai requests
-
+      - run: pip install google-genai requests
       - name: Run Job Agent
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
         run: python hunter.py
-
       - name: Commit and Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add jobs.json
-          git commit -m "Update Jobs: $(date)" || echo "No changes"
+          git commit -m "Update Jobs" || echo "No changes"
           git push
