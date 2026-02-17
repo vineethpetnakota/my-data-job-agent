@@ -1,23 +1,19 @@
 name: Senior Data Job Bot
 
 on:
-  schedule:
-    - cron: '17 * * * *'
-  workflow_dispatch:
+  workflow_dispatch: # Allows manual trigger
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    # This explicitly tells GitHub this job can write to your repo
     permissions:
-      contents: write
+      contents: write # Granting permission to push code
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          # This setting ensures the GITHUB_TOKEN is used for subsequent git commands
-          persist-credentials: true 
+          token: ${{ secrets.GITHUB_TOKEN }} # Use internal token for auth
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -33,15 +29,10 @@ jobs:
           SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
         run: python hunter.py
 
-      - name: Commit and Push Results
+      - name: Commit and Push
         run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Force an update even if jobs.json didn't change
-          echo "Last hunt: $(date)" > heartbeat.txt
-          
-          git add jobs.json heartbeat.txt
-          # The '|| echo' prevents the workflow from failing if there are no changes
-          git commit -m "Hourly Hunt Sync: $(date)" || echo "No changes to commit"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add jobs.json
+          git commit -m "Update Jobs: $(date)" || echo "No changes"
           git push
