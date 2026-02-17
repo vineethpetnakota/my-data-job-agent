@@ -1,73 +1,63 @@
 import os
 import json
 import requests
-from google import genai
+from datetime import datetime
 
 # Config
 SERPER_KEY = os.getenv("SERPER_API_KEY")
-GEMINI_KEY = os.getenv("GEMINI_API_KEY")
 
 def get_jobs():
-    """Fetches 20 raw leads from Google/Serper."""
-    query = 'intitle:"Data Analyst" (site:boards.greenhouse.io OR site:jobs.lever.co)'
+    # Broadened search for your specific roles
+    roles = ['"Data Analyst"', '"Business Intelligence Analyst"', '"Financial Analyst"', '"Data Engineer"']
+    query = f"({' OR '.join(roles)}) (site:boards.greenhouse.io OR site:jobs.lever.co)"
+    
     url = "https://google.serper.dev/search"
     headers = {'X-API-KEY': str(SERPER_KEY), 'Content-Type': 'application/json'}
     
     try:
-        response = requests.post(url, headers=headers, json={"q": query, "num": 20})
+        # Requesting 40 to ensure we hit your 10-20 lead goal per run
+        response = requests.post(url, headers=headers, json={"q": query, "num": 40})
         return response.json().get('organic', [])
     except:
         return []
 
-def process_with_ai(raw_leads):
-    """Uses Gemini to identify the Company and filter out non-data roles."""
-    if not GEMINI_KEY:
-        print("❌ Gemini Key missing!")
-        return []
+def update_database(new_raw_leads):
+    file_path = 'jobs.json'
+    
+    # 1. Load existing jobs
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as f:
+            database = json.load(f)
+    else:
+        database = []
 
-    client = genai.Client(api_key=GEMINI_KEY)
-    final_jobs = []
+    # 2. Mark all existing jobs as 'Old'
+    for job in database:
+        job['status'] = 'Old'
 
-    for lead in raw_leads:
-        title = lead.get('title', 'Unknown Title')
-        snippet = lead.get('snippet', '')
-        
-        # Simple Prompt: Just Company extraction + Verification
-        prompt = f"""
-        Analyze this job lead:
-        Title: {title}
-        Snippet: {snippet}
+    # 3. Add new leads (Avoiding duplicates)
+    existing_urls = {job['url'] for job in database}
+    new_count = 0
+    
+    for lead in new_raw_leads:
+        url = lead.get('link')
+        if url not in existing_urls:
+            database.append({
+                "title": lead.get('title'),
+                "url": url,
+                "company": "New Lead",
+                "status": "New", # Freshly found!
+                "found_at": datetime.now().strftime("%Y-%m-%d %H:%M")
+            })
+            existing_urls.add(url)
+            new_count += 1
 
-        1. Is this actually a Data Analyst or Data Engineer role?
-        2. What is the Company Name?
-
-        Return ONLY JSON: {{"match": true, "company": "Name"}} or {{"match": false}}
-        """
-
-        try:
-            response = client.models.generate_content(model="gemini-1.5-flash", contents=prompt)
-            # Clean the AI response to get pure JSON
-            res_text = response.text.strip().replace('```json', '').replace('```', '').strip()
-            data = json.loads(res_text)
-
-            if data.get("match") is True:
-                final_jobs.append({
-                    "title": title,
-                    "url": lead.get('link'),
-                    "company": data.get("company", "Unknown"),
-                    "experience": "Checking...", # We will add this in Phase 2!
-                    "score": 100
-                })
-        except:
-            continue
-            
-    return final_jobs
+    # 4. Save back to file
+    with open(file_path, 'w') as f:
+        json.dump(database, f, indent=4)
+    
+    print(f"📊 Summary: {new_count} New leads added. {len(database) - new_count} Archived.")
 
 if __name__ == "__main__":
-    print("🚀 Running AI-Categorized Pipeline...")
     raw = get_jobs()
-    if raw:
-        processed = process_with_ai(raw)
-        with open('jobs.json', 'w') as f:
-            json.dump(processed, f, indent=4)
-        print(f"✅ Success! {len(processed)} jobs verified by AI.")
+    update_database(raw)
