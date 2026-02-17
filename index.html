@@ -2,180 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Job Hunter Command Center</title>
+    <title>Job Hunt Hub</title>
     <style>
-        :root {
-            --primary: #1a73e8;
-            --success: #1e8e3e;
-            --warning: #fbbc04;
-            --bg: #f8f9fa;
-            --text: #202124;
-        }
-
-        body { 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            margin: 0; 
-            background: var(--bg); 
-            color: var(--text); 
-            line-height: 1.6;
-        }
-
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        
-        header { 
-            margin-bottom: 30px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: flex-end;
-            border-bottom: 2px solid #dee2e6;
-            padding-bottom: 20px;
-        }
-
-        h1 { margin: 0; font-size: 2rem; color: var(--primary); }
-        #update-time { color: #5f6368; font-size: 0.9rem; margin: 0; }
-
-        .section { 
-            background: white; 
-            padding: 25px; 
-            border-radius: 12px; 
-            margin-bottom: 30px; 
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
-        }
-
-        h2 { margin-top: 0; font-size: 1.3rem; display: flex; align-items: center; gap: 10px; }
-
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th { text-align: left; padding: 12px; color: #5f6368; font-weight: 500; border-bottom: 2px solid #eee; }
-        td { padding: 15px; border-bottom: 1px solid #eee; vertical-align: middle; }
-
-        /* Highlight for the "Best" Jobs */
-        .best-match { background-color: #fffdf0 !important; }
-        .score-pill { 
-            padding: 4px 12px; 
-            border-radius: 50px; 
-            font-size: 0.85rem; 
-            font-weight: 600;
-            background: #f1f3f4;
-            color: #5f6368;
-        }
-        .high-score { background: #e6f4ea; color: var(--success); border: 1px solid var(--success); }
-
-        .tag {
-            font-size: 0.7rem;
-            padding: 2px 8px;
-            border-radius: 4px;
-            text-transform: uppercase;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-        .tag-new { background: var(--warning); color: #3c4043; }
-
-        .apply-btn { 
-            background: var(--primary); 
-            color: white; 
-            padding: 8px 20px; 
-            border-radius: 6px; 
-            text-decoration: none; 
-            font-size: 0.9rem;
-            transition: background 0.2s;
-            display: inline-block;
-        }
-        .apply-btn:hover { background: #1557b0; }
-
-        @media (max-width: 600px) {
-            .container { padding: 10px; }
-            th:nth-child(3), td:nth-child(3) { display: none; } /* Hide score on mobile */
-        }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; }
+        .section { background: white; padding: 20px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        h2 { color: #1a73e8; font-size: 1.2rem; border-bottom: 2px solid #f0f2f5; padding-bottom: 10px; margin-top: 0; }
+        .job-card { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #eee; }
+        .job-card:last-child { border-bottom: none; }
+        .badge { font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 4px; margin-left: 5px; color: white; }
+        .badge-new { background: #28a745; }
+        .badge-saved { background: #f39c12; }
+        .company { font-weight: bold; font-size: 1.1rem; }
+        .title { color: #555; font-size: 0.95rem; display: block; }
+        .time { font-size: 0.8rem; color: #999; }
+        .btn { background: #1a73e8; color: white; text-decoration: none; padding: 8px 15px; border-radius: 6px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <header>
-            <div>
-                <h1>🎯 Job Hunt Command Center</h1>
-                <p>Automated Hourly Career Scanning</p>
-            </div>
-            <p id="update-time">Waiting for data...</p>
-        </header>
+        <h1>🎯 Career Command Center</h1>
         
         <div class="section">
-            <h2>🚀 New Leads (This Hour)</h2>
-            <table id="new-table">
-                <thead>
-                    <tr><th>Company</th><th>Role</th><th>Match</th><th>Action</th></tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <h2>🚀 Latest Leads (Freshly Found)</h2>
+            <div id="new-container"></div>
         </div>
 
         <div class="section">
-            <h2>📂 Archived Leads (Earlier Today)</h2>
-            <table id="old-table">
-                <thead>
-                    <tr><th>Company</th><th>Role</th><th>Match</th><th>Action</th></tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <h2>📂 6PM Archive (Missed Yesterday)</h2>
+            <div id="saved-container"></div>
+        </div>
+
+        <div class="section">
+            <h2>🕒 Older History (Last 72h)</h2>
+            <div id="history-container"></div>
         </div>
     </div>
 
     <script>
-        async function fetchJobs() {
-            try {
-                const res = await fetch('jobs.json');
-                if (!res.ok) throw new Error('No jobs.json found');
-                const jobs = await res.json();
+        async function loadJobs() {
+            const res = await fetch('jobs.json');
+            const jobs = await res.json();
+            
+            const containers = {
+                'New': document.getElementById('new-container'),
+                'Best_Archived': document.getElementById('saved-container'),
+                'Archive': document.getElementById('history-container')
+            };
+
+            jobs.forEach(j => {
+                const target = containers[j.status] || containers['Archive'];
+                const badge = j.status === 'New' ? '<span class="badge badge-new">LIVE</span>' : 
+                              j.status === 'Best_Archived' ? '<span class="badge badge-saved">6PM PICK</span>' : '';
                 
-                const newT = document.querySelector('#new-table tbody');
-                const oldT = document.querySelector('#old-table tbody');
-                const timeLabel = document.getElementById('update-time');
+                target.innerHTML += `
+                    <div class="job-card">
+                        <div>
+                            <span class="company">${j.company}</span>${badge}
+                            <span class="title">${j.title}</span>
+                            <span class="time">Found: ${j.found_at}</span>
+                        </div>
+                        <a href="${j.url}" target="_blank" class="btn">Apply</a>
+                    </div>
+                `;
+            });
 
-                // Clear current content
-                newT.innerHTML = '';
-                oldT.innerHTML = '';
-
-                if (jobs.length > 0) {
-                    timeLabel.innerText = `Last sync: ${jobs[0].found_at || 'Just now'}`;
-                }
-
-                jobs.forEach(j => {
-                    const isBest = j.score >= 80;
-                    const rowClass = isBest ? 'best-match' : '';
-                    const scoreClass = isBest ? 'high-score' : '';
-                    const star = isBest ? '⭐ ' : '';
-                    
-                    const row = `
-                        <tr class="${rowClass}">
-                            <td><strong>${j.company}</strong></td>
-                            <td>
-                                ${star}${j.title}
-                                ${j.status === 'New' ? '<span class="tag tag-new">NEW</span>' : ''}
-                            </td>
-                            <td><span class="score-pill ${scoreClass}">${j.score}%</span></td>
-                            <td><a href="${j.url}" class="apply-btn" target="_blank">View Role</a></td>
-                        </tr>
-                    `;
-                    
-                    if (j.status === 'New') {
-                        newT.innerHTML += row;
-                    } else {
-                        oldT.innerHTML += row;
-                    }
-                });
-
-                // Handle empty states
-                if (newT.innerHTML === '') newT.innerHTML = '<tr><td colspan="4">No new leads this hour.</td></tr>';
-                if (oldT.innerHTML === '') oldT.innerHTML = '<tr><td colspan="4">No archived leads yet.</td></tr>';
-
-            } catch (error) {
-                console.error('Error loading jobs:', error);
-                document.querySelector('.container').innerHTML += `<p style="color:red">Error loading jobs.json. Ensure the GitHub Action has run at least once.</p>`;
-            }
+            // Fill empty states
+            Object.values(containers).forEach(c => {
+                if(c.innerHTML === '') c.innerHTML = '<p style="color:#999; font-size:0.9rem;">No leads in this section yet.</p>';
+            });
         }
-
-        fetchJobs();
+        loadJobs();
     </script>
 </body>
 </html>
