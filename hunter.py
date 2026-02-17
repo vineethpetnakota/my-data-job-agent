@@ -9,21 +9,15 @@ SERPER_KEY = os.getenv("SERPER_API_KEY")
 
 def get_jobs():
     """Ultra-broad search to force results."""
-    # We are removing specific sites and strict quotes to ensure we get leads
-    query = 'Senior Data Analyst OR Senior Data Engineer'
+    # We use a very common search string to ensure we get leads
+    query = 'Senior "Data Analyst" OR "Data Engineer"'
     
     url = "https://google.serper.dev/search"
     headers = {'X-API-KEY': SERPER_KEY, 'Content-Type': 'application/json'}
     
     try:
-        response = requests.post(url, headers=headers, json={"q": query, "num": 50})
+        response = requests.post(url, headers=headers, json={"q": query, "num": 40})
         data = response.json()
-        
-        # Debugging: Print the whole response if it's empty
-        if "organic" not in data:
-            print(f"❌ API MESSAGE: {data.get('message', 'No organic results found')}")
-            return []
-            
         results = data.get('organic', [])
         print(f"📊 PROGRESS: Serper found {len(results)} raw leads.")
         return results
@@ -32,7 +26,7 @@ def get_jobs():
         return []
 
 def analyze_jobs(jobs):
-    """Generous AI filtering."""
+    """Generous AI filtering with fixed syntax."""
     if not GEMINI_KEY:
         print("❌ GEMINI ERROR: Key missing")
         return []
@@ -44,14 +38,20 @@ def analyze_jobs(jobs):
         role_title = j.get('title', '')
         snippet = j.get('snippet', '')
         
-        prompt = f"Is this a senior data role? Title: {role_title}. Snippet: {snippet}. Return JSON: {{"match": true, "co": "Company"}} or {{"match": false}}"
+        # FIXED: Doubled braces {{ }} allow literal JSON inside f-strings
+        prompt = f"""
+        Is this a senior data role? 
+        Title: {role_title}
+        Snippet: {snippet}
+        Return ONLY valid JSON: {{"match": true, "co": "Company Name"}} or {{"match": false}}
+        """
         
         try:
             response = client.models.generate_content(model="gemini-1.5-flash", contents=prompt)
             clean_json = response.text.strip().replace('```json', '').replace('```', '').strip()
             data = json.loads(clean_json)
             
-            if data.get('match'):
+            if data.get('match') is True:
                 valid_jobs.append({
                     "title": role_title,
                     "url": j.get('link'),
@@ -68,4 +68,4 @@ if __name__ == "__main__":
     final_list = analyze_jobs(leads) if leads else []
     with open('jobs.json', 'w') as f:
         json.dump(final_list, f, indent=4)
-    print(f"✅ SUCCESS: Saved {len(final_list)} jobs.")
+    print(f"✅ SUCCESS: Processed {len(leads) if leads else 0} leads and saved {len(final_list)} matches.")
