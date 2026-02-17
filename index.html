@@ -3,100 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Data Job Hunter (5-8 Years)</title>
+    <title>AI Job Hunter</title>
     <style>
-        :root { --bg: #0a0a0a; --card: #161616; --accent: #00ff88; --text: #eee; --secondary: #888; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
-        
-        /* Status Bar Styles */
-        .status-bar { display: flex; align-items: center; justify-content: space-between; background: var(--card); padding: 15px 25px; border-radius: 12px; border: 1px solid #333; width: 100%; max-width: 700px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
-        .pulse { height: 10px; width: 10px; background: var(--accent); border-radius: 50%; display: inline-block; box-shadow: 0 0 10px var(--accent); animation: pulse 2s infinite; margin-right: 10px; }
-        @keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
-        
-        .count-badge { background: #222; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; color: var(--accent); border: 1px solid #444; font-weight: bold; }
-        .refresh-btn { text-decoration: none; background: #222; color: #fff; padding: 8px 15px; border-radius: 6px; font-size: 0.8rem; border: 1px solid #444; transition: 0.3s; }
-        .refresh-btn:hover { background: #333; border-color: var(--accent); }
-
-        /* Job Grid Styles */
-        #job-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; width: 100%; max-width: 1100px; }
-        .job-card { background: var(--card); padding: 25px; border-radius: 12px; border: 1px solid #333; position: relative; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .job-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,255,136,0.1); }
-        
-        .score { position: absolute; top: 15px; right: 15px; font-size: 0.7rem; color: var(--accent); font-weight: bold; border: 1px solid var(--accent); padding: 2px 6px; border-radius: 4px; }
-        .company-name { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 8px; display: block; text-transform: uppercase; letter-spacing: 1px; }
-        
-        .exp-badge { display: inline-block; background: #222; color: #aaa; font-size: 0.75rem; padding: 4px 10px; border-radius: 6px; border: 1px solid #444; margin-bottom: 15px; }
-        
-        .apply-btn { display: block; text-align: center; margin-top: 20px; background: var(--accent); color: #000; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: bold; font-size: 0.9rem; transition: 0.2s; }
-        .apply-btn:hover { background: #00cc6e; transform: scale(1.02); }
-        
-        h1 { margin-bottom: 10px; letter-spacing: -1.5px; font-size: 2.5rem; text-align: center; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f0f2f5; color: #333; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .section { background: white; padding: 20px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h2 { color: #1a73e8; border-bottom: 2px solid #e8eaed; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .score-badge { padding: 4px 8px; border-radius: 20px; font-weight: bold; font-size: 0.85em; }
+        .high-score { background: #e6f4ea; color: #1e8e3e; border: 1px solid #1e8e3e; }
+        .apply-btn { background: #1a73e8; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9em; }
+        .apply-btn:hover { background: #1557b0; }
+        .tag { font-size: 0.75em; padding: 2px 6px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
+        .new-tag { background: #fbbc04; color: #3c4043; }
     </style>
 </head>
 <body>
-    <h1>Data Career Hunter</h1>
-    <div class="status-bar">
-        <div>
-            <span class="pulse"></span>
-            <span id="update-time" style="color: var(--secondary)">Syncing...</span>
+    <div class="container">
+        <header><h1>🎯 Job Hunt Command Center</h1></header>
+        
+        <div class="section">
+            <h2>🚀 New Leads (This Hour)</h2>
+            <table id="new-table"><tbody></tbody></table>
         </div>
-        <div style="display: flex; gap: 15px; align-items: center;">
-            <span id="job-count" class="count-badge">0 Jobs Found</span>
-            <a href="https://github.com/vineethpetnakota/my-data-job-agent/actions" target="_blank" class="refresh-btn">🔄 Force Hunt</a>
+
+        <div class="section">
+            <h2>📂 Archived Leads (History)</h2>
+            <table id="old-table"><tbody></tbody></table>
         </div>
     </div>
-    
-    <div id="job-list">Scanning for 5-8 year senior roles...</div>
 
     <script>
-        const username = "vineethpetnakota";
-        const repo = "my-data-job-agent"; 
+        async function fetchJobs() {
+            const res = await fetch('jobs.json');
+            const jobs = await res.json();
+            
+            const newT = document.querySelector('#new-table tbody');
+            const oldT = document.querySelector('#old-table tbody');
 
-        async function init() {
-            // 1. Get real update time from the LATEST repo commit (Heartbeat)
-            try {
-                const res = await fetch(`https://api.github.com/repos/${username}/${repo}/commits?per_page=1`);
-                const commits = await res.json();
-                if(commits[0]) {
-                    const d = new Date(commits[0].commit.committer.date);
-                    document.getElementById('update-time').innerText = "Last Hunt: " + d.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
-                }
-            } catch(e) { 
-                console.error("Update time fetch failed"); 
-                document.getElementById('update-time').innerText = "Last Hunt: Offline";
-            }
-
-            // 2. Load Jobs from JSON (with Cache Busting)
-            try {
-                const res = await fetch('jobs.json?v=' + Date.now()); 
-                const jobs = await res.json();
+            jobs.forEach(j => {
+                const badgeClass = j.score >= 80 ? 'high-score' : '';
+                const star = j.score >= 80 ? '⭐ ' : '';
+                const row = `<tr>
+                    <td><b>${j.company}</b></td>
+                    <td>${star}${j.title} ${j.status === 'New' ? '<span class="tag new-tag">NEW</span>' : ''}</td>
+                    <td><span class="score-badge ${badgeClass}">${j.score}% Match</span></td>
+                    <td><a href="${j.url}" class="apply-btn" target="_blank">View</a></td>
+                </tr>`;
                 
-                document.getElementById('job-count').innerText = `${jobs.length} Jobs Found`;
-                const list = document.getElementById('job-list');
-                
-                if(!jobs || jobs.length === 0) {
-                    list.innerHTML = `
-                        <div style='grid-column: 1/-1; text-align: center; color: #666; margin-top: 50px;'>
-                            <p>No new 5-8yr matches found in the most recent scan.<br>
-                            The bot is active and checking every hour.</p>
-                        </div>`;
-                    return;
-                }
-                
-                list.innerHTML = jobs.map(j => `
-                    <div class="job-card">
-                        <span class="score">${j.score}% Match</span>
-                        <span class="company-name">${j.company}</span>
-                        <h3 style="margin: 5px 0 15px 0; font-size: 1.2rem;">${j.title}</h3>
-                        <div class="exp-badge">🕒 ${j.experience || '5-8 Years'}</div>
-                        <a href="${j.url}" target="_blank" class="apply-btn">Apply Now</a>
-                    </div>
-                `).join('');
-            } catch(e) { 
-                document.getElementById('job-list').innerHTML = "Initializing agent... Please run the GitHub Action to generate results."; 
-            }
+                if (j.status === 'New') newT.innerHTML += row;
+                else oldT.innerHTML += row;
+            });
         }
-        init();
+        fetchJobs();
     </script>
 </body>
 </html>
