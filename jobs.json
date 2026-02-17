@@ -1,5 +1,47 @@
 [
     {
+        "title": "Nova Talent - Senior Data Engineer - Lever",
+        "url": "https://jobs.lever.co/novatalent/142df14a-4821-4960-a34a-0c3effb375f6",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-17 22:18"
+    },
+    {
+        "title": "Staff Data Engineer - Artera - Lever",
+        "url": "https://jobs.lever.co/artera-2/b4c68819-317c-4338-818c-5a3062a537ec",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-17 22:18"
+    },
+    {
+        "title": "Job Application for Power BI Developer at Accenture Federal Services",
+        "url": "https://job-boards.greenhouse.io/accenturefederalservices/jobs/4653616006",
+        "company": "Accenture Federal Services",
+        "status": "New",
+        "found_at": "2026-02-17 22:18"
+    },
+    {
+        "title": "Job Application for Dynamics 365 Power BI Engineer at Accenture ...",
+        "url": "https://job-boards.greenhouse.io/accenturefederalservices/jobs/4604421006?gh_jid=4604421006",
+        "company": "Accenture ...",
+        "status": "New",
+        "found_at": "2026-02-17 22:18"
+    },
+    {
+        "title": "Data Visualization / Power BI Expert - Apply for this job - Greenhouse",
+        "url": "http://job-boards.greenhouse.io/gapinternational/jobs/5197223004",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-17 22:18"
+    },
+    {
+        "title": "Job Application for Business Intelligence Analyst - Senior at Luminis ...",
+        "url": "https://boards.greenhouse.io/luminishealth/jobs/4953868008",
+        "company": "Luminis ...",
+        "status": "New",
+        "found_at": "2026-02-17 22:18"
+    },
+    {
         "title": "Job Application for Senior Business Intelligence Analyst at StarRez",
         "url": "https://boards.greenhouse.io/starrez/jobs/5118067008",
         "company": "StarRez",
@@ -304,48 +346,6 @@
         "title": "Senior Power BI Application Developer - Greenhouse",
         "url": "https://job-boards.greenhouse.io/goodsservices/jobs/7568024003",
         "company": "US Tech Co",
-        "status": "New",
-        "found_at": "2026-02-17 18:48"
-    },
-    {
-        "title": "Job Application for Power BI Developer at Accenture Federal Services",
-        "url": "https://job-boards.greenhouse.io/accenturefederalservices/jobs/4653637006",
-        "company": "Accenture Federal Services",
-        "status": "New",
-        "found_at": "2026-02-17 18:48"
-    },
-    {
-        "title": "Job Application for Power BI Developer (4897) at ESS - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/ess/jobs/7564663003",
-        "company": "ESS",
-        "status": "New",
-        "found_at": "2026-02-17 18:48"
-    },
-    {
-        "title": "Sr Business Intelligence Developer | Power BI (Remote) - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/trace3/jobs/7595018",
-        "company": "US Tech Co",
-        "status": "New",
-        "found_at": "2026-02-17 18:48"
-    },
-    {
-        "title": "Consultant - Senior Power BI/Microsoft Fabric Security Engineer",
-        "url": "http://job-boards.greenhouse.io/kallesgroup/jobs/8026975002",
-        "company": "US Tech Co",
-        "status": "New",
-        "found_at": "2026-02-17 18:48"
-    },
-    {
-        "title": "Job Application for Power BI Specialist at Witherite Law Group",
-        "url": "https://job-boards.greenhouse.io/witheritelawgroup/jobs/5080609008",
-        "company": "Witherite Law Group",
-        "status": "New",
-        "found_at": "2026-02-17 18:48"
-    },
-    {
-        "title": "Job Application for Senior Power BI Developer at 9th Way Insignia",
-        "url": "https://job-boards.greenhouse.io/9thwayinsignia/jobs/5032205008",
-        "company": "9th Way Insignia",
         "status": "New",
         "found_at": "2026-02-17 18:48"
     }
