@@ -1,73 +1,61 @@
 import os
 import json
 import requests
-import time
 from google import genai
 
-# Configuration - Ensure these names match your GitHub Secrets exactly!
+# Config - Matches your GitHub Secrets
 GEMINI_KEY = os.getenv("GEMINI_API_KEY")
 SERPER_KEY = os.getenv("SERPER_API_KEY")
 
 def get_jobs():
-    """Simple global search to guarantee we bypass the '0 raw leads' error."""
-    # This query is broad enough that Google will always have results
-    query = 'Senior Data Analyst jobs remote USA'
+    """Broad search to ensure Google/Serper actually returns leads."""
+    # This query captures broad 'Senior' roles across major ATS platforms
+    query = 'Senior (Data Analyst OR Data Engineer) (site:lever.co OR site:greenhouse.io OR site:ashbyhq.com)'
     
     url = "https://google.serper.dev/search"
-    headers = {
-        'X-API-KEY': str(SERPER_KEY), 
-        'Content-Type': 'application/json'
-    }
+    headers = {'X-API-KEY': str(SERPER_KEY), 'Content-Type': 'application/json'}
     
-    # Debugging: Check if key is loaded
-    if not SERPER_KEY:
-        print("❌ ERROR: SERPER_API_KEY is missing from Environment Secrets!")
-        return []
-
     try:
-        payload = {"q": query, "num": 50}
-        response = requests.post(url, headers=headers, json=payload)
+        response = requests.post(url, headers=headers, json={"q": query, "num": 40})
         data = response.json()
-        
         results = data.get('organic', [])
         print(f"📊 PROGRESS: Serper found {len(results)} raw leads.")
-        
-        if not results:
-            print(f"⚠️ API Response: {data}") # Prints the error message from Serper if 0 found
-            
         return results
     except Exception as e:
-        print(f"❌ SERPER CONNECTION ERROR: {e}")
+        print(f"❌ SERPER ERROR: {e}")
         return []
 
 def analyze_jobs(jobs):
-    """Uses Gemini to filter for the 5-8 year sweet spot."""
+    """Filters roles with a focus on 'Seniority' while being flexible on snippets."""
     if not GEMINI_KEY:
-        print("❌ ERROR: GEMINI_API_KEY is missing from Environment Secrets!")
+        print("❌ GEMINI ERROR: Key missing")
         return []
         
     client = genai.Client(api_key=GEMINI_KEY)
     valid_jobs = []
     
-    print(f"🧠 AI is now screening {len(jobs)} leads...")
+    print(f"🧠 AI is screening {len(jobs)} leads for the 5-8 year sweet spot...")
     
     for j in jobs:
         role_title = j.get('title', '')
         snippet = j.get('snippet', '')
         
-        # Doubled curly braces {{ }} are required to use JSON inside an f-string
+        # PROMPT: We use {{ }} for JSON so Python f-strings don't crash.
         prompt = f"""
-        Role: {role_title}
-        Info: {snippet}
+        Analyze this job lead:
+        Title: {role_title}
+        Snippet: {snippet}
 
-        Is this a Data role for someone with 5-9 years of experience? 
-        If it's 'Senior' or 'Staff' and NOT a 'Director' or 'Junior', say YES.
-        
+        CRITERIA:
+        - Target: Senior Data roles (approx 5-9 years experience).
+        - REJECT if: Title is Junior, Intern, or Director/VP.
+        - ACCEPT if: Title is Senior/Staff/Lead/III/IV, even if years aren't in snippet.
+
         Return ONLY valid JSON: {{"match": true, "co": "Company Name"}} or {{"match": false}}
         """
         
         try:
-            # Using 1.5-flash for reliability on free tier
+            # Using 1.5-flash for maximum reliability/speed on the Free tier
             response = client.models.generate_content(model="gemini-1.5-flash", contents=prompt)
             clean_json = response.text.strip().replace('```json', '').replace('```', '').strip()
             data = json.loads(clean_json)
@@ -81,24 +69,20 @@ def analyze_jobs(jobs):
                     "score": 95
                 })
         except:
+            # If AI fails on one job, skip to the next
             continue
             
-    print(f"✅ SUCCESS: Gemini approved {len(valid_jobs)} matching roles.")
+    print(f"✅ SUCCESS: Gemini approved {len(valid_jobs)} jobs.")
     return valid_jobs
 
 if __name__ == "__main__":
     print("🚀 Starting the Hunt...")
     raw_leads = get_jobs()
     
-    if raw_leads:
-        final_results = analyze_jobs(raw_leads)
+    # Process the leads and save them
+    final_list = analyze_jobs(raw_leads) if raw_leads else []
+    
+    with open('jobs.json', 'w') as f:
+        json.dump(final_list, f, indent=4)
         
-        with open('jobs.json', 'w') as f:
-            json.dump(final_results, f, indent=4)
-        
-        print(f"💾 File updated: {len(final_results)} jobs saved to jobs.json.")
-    else:
-        # Save empty list if nothing found to prevent dashboard crash
-        with open('jobs.json', 'w') as f:
-            json.dump([], f)
-        print("❌ Mission failed: No leads to process.")
+    print(f"💾 File updated: {len(final_list)} jobs saved. Ready for dashboard.")
