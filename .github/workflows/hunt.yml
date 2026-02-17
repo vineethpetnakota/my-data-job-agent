@@ -1,20 +1,18 @@
-name: Hourly Job Hunter
+name: Hourly US Job Hunter
 
 on:
-  workflow_dispatch: # Allows you to run it manually
+  workflow_dispatch:
   schedule:
-    - cron: '0 * * * *' # Runs every 60 minutes, on the hour
+    - cron: '0 * * * *' # Runs every 60 minutes
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Crucial: Allows the bot to save jobs.json back to your repo
-    
+      contents: write # Allows the bot to update jobs.json
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4
+      
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -23,16 +21,15 @@ jobs:
       - name: Install Dependencies
         run: pip install requests
 
-      - name: Run Job Hunter Script
+      - name: Run Hunt
         env:
           SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
         run: python hunter.py
 
-      - name: Commit and Push Changes
+      - name: Commit and Push Updates
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add jobs.json
-          # The "|| exit 0" prevents the workflow from failing if no new jobs were found
-          git commit -m "Automated Update: New leads & 6PM archiving" || exit 0
+          git commit -m "Update leads & 6PM Archive [skip ci]" || exit 0
           git push
