@@ -3,11 +3,27 @@ import json
 import requests
 from datetime import datetime
 
-# Config
+# Configuration
 SERPER_KEY = os.getenv("SERPER_API_KEY")
 
+def calculate_score(title, snippet):
+    """Assigns a value score to each job."""
+    score = 50
+    t = title.lower()
+    s = snippet.lower()
+    
+    # Priority Keywords (+ points)
+    if any(x in t for x in ['engineer', 'bi', 'business intelligence']): score += 30
+    if any(x in t for x in ['senior', 'sr', 'lead', 'staff']): score += 20
+    if 'remote' in s or 'remote' in t: score += 10
+    
+    # Negative Keywords (- points)
+    if any(x in t for x in ['intern', 'junior', 'entry']): score -= 60
+    
+    return max(0, min(score, 100))
+
 def get_jobs():
-    # Broadened search for your specific roles
+    """Searches for multiple roles across top ATS boards."""
     roles = ['"Data Analyst"', '"Business Intelligence Analyst"', '"Financial Analyst"', '"Data Engineer"']
     query = f"({' OR '.join(roles)}) (site:boards.greenhouse.io OR site:jobs.lever.co)"
     
@@ -15,7 +31,6 @@ def get_jobs():
     headers = {'X-API-KEY': str(SERPER_KEY), 'Content-Type': 'application/json'}
     
     try:
-        # Requesting 40 to ensure we hit your 10-20 lead goal per run
         response = requests.post(url, headers=headers, json={"q": query, "num": 40})
         return response.json().get('organic', [])
     except:
@@ -24,40 +39,44 @@ def get_jobs():
 def update_database(new_raw_leads):
     file_path = 'jobs.json'
     
-    # 1. Load existing jobs
+    # Load existing database
     if os.path.exists(file_path):
-        with open(file_path, 'r') as f:
-            database = json.load(f)
+        try:
+            with open(file_path, 'r') as f:
+                database = json.load(f)
+        except: database = []
     else:
         database = []
 
-    # 2. Mark all existing jobs as 'Old'
+    # Mark all currently stored jobs as 'Old'
     for job in database:
         job['status'] = 'Old'
 
-    # 3. Add new leads (Avoiding duplicates)
     existing_urls = {job['url'] for job in database}
-    new_count = 0
+    new_found = 0
     
     for lead in new_raw_leads:
         url = lead.get('link')
-        if url not in existing_urls:
+        if url and url not in existing_urls:
+            title = lead.get('title', 'Unknown Role')
             database.append({
-                "title": lead.get('title'),
+                "title": title,
                 "url": url,
-                "company": "New Lead",
-                "status": "New", # Freshly found!
+                "company": lead.get('snippet', '').split('...')[0][:30] or "Hiring Co",
+                "status": "New",
+                "score": calculate_score(title, lead.get('snippet', '')),
                 "found_at": datetime.now().strftime("%Y-%m-%d %H:%M")
             })
             existing_urls.add(url)
-            new_count += 1
+            new_found += 1
 
-    # 4. Save back to file
+    # Sort: Highest score first
+    database.sort(key=lambda x: x['score'], reverse=True)
+
     with open(file_path, 'w') as f:
         json.dump(database, f, indent=4)
-    
-    print(f"📊 Summary: {new_count} New leads added. {len(database) - new_count} Archived.")
+    print(f"📊 {new_found} new jobs added. Database size: {len(database)}")
 
 if __name__ == "__main__":
-    raw = get_jobs()
-    update_database(raw)
+    leads = get_jobs()
+    update_database(leads)
