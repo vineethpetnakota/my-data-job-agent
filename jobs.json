@@ -1,5 +1,13 @@
 [
     {
+        "title": "Jobgether - Data Engineer (Remote from United States) - Lever",
+        "url": "https://jobs.lever.co/jobgether/14d389a7-7bc4-4143-a11a-b689c14ba6ba",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "15 hours ago",
+        "found_at": "2026-02-18 22:03"
+    },
+    {
         "title": "Job Application for Data Analyst at LTK USA - Greenhouse",
         "url": "https://job-boards.greenhouse.io/shopltk/jobs/7634080003",
         "company": "LTK USA",
@@ -344,12 +352,5 @@
         "company": "CAIS",
         "status": "New",
         "found_at": "2026-02-18 15:40"
-    },
-    {
-        "title": "Data Analyst Intern - ZURU - Lever",
-        "url": "https://jobs.lever.co/zuru/7cd43f13-6ee0-4f74-8d59-d6571a353848",
-        "company": "US Tech Co",
-        "status": "New",
-        "found_at": "2026-02-18 14:00"
     }
 ]
