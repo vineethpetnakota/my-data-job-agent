@@ -1,5 +1,40 @@
 [
     {
+        "title": "Data Engineer - Qloo - Lever",
+        "url": "https://jobs.lever.co/qloo/47c04a12-16b9-42b3-8e28-bd6f4fb0ca75/apply",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 12:34"
+    },
+    {
+        "title": "Staff Data Engineer - Cority - Lever",
+        "url": "https://jobs.lever.co/cority/b7a25afb-bd29-495d-bdcf-c96ef5a481a6",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 12:34"
+    },
+    {
+        "title": "Senior Data Engineer - Addition - Lever",
+        "url": "https://jobs.lever.co/additionwealth/dcfb05d2-31bd-45fb-90ee-94cce924d1cb",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 12:34"
+    },
+    {
+        "title": "Koala Health - Data Engineer - Lever",
+        "url": "https://jobs.lever.co/koalahealth/1defbdc8-d1e0-4454-bf58-36068e46719c",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 12:34"
+    },
+    {
+        "title": "Nextech - Data Engineer II (Remote - United States) - Lever",
+        "url": "https://jobs.lever.co/nextech/04a7a871-9843-446e-a3d0-c485a03f663e/apply",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 12:34"
+    },
+    {
         "title": "IMO Health - Sr. Data Engineer - Lever",
         "url": "https://jobs.lever.co/imo-online/11d5c7c7-c6f2-4dab-8a9d-c01ddd8e51e7",
         "company": "US Tech Co",
@@ -313,40 +348,5 @@
         "company": "US Tech Co",
         "status": "New",
         "found_at": "2026-02-18 06:47"
-    },
-    {
-        "title": "Jobgether - Data Engineer (Remote from United States) - Lever",
-        "url": "https://jobs.lever.co/jobgether/14d389a7-7bc4-4143-a11a-b689c14ba6ba",
-        "company": "US Tech Co",
-        "status": "New",
-        "found_at": "2026-02-18 06:47"
-    },
-    {
-        "title": "Welocalize - Ara Gamma \u2013 Data Engineer (LLM Data & Prompt ...",
-        "url": "https://jobs.lever.co/welocalize/d97ce26d-0aab-4adb-89a3-437868fd4105",
-        "company": "US Tech Co",
-        "status": "New",
-        "found_at": "2026-02-18 06:47"
-    },
-    {
-        "title": "Job Application for AI Data Analyst at CAIS - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/cais/jobs/8374091002",
-        "company": "CAIS",
-        "status": "New",
-        "found_at": "2026-02-18 06:47"
-    },
-    {
-        "title": "Data Analyst 3 - SkySlope - Lever",
-        "url": "https://jobs.lever.co/skyslope/0ef5761c-ee59-4edb-bec6-79444136e49a/apply",
-        "company": "US Tech Co",
-        "status": "New",
-        "found_at": "2026-02-18 05:53"
-    },
-    {
-        "title": "Senior Data Engineer - Peerspace - Lever",
-        "url": "https://jobs.lever.co/peerspace/d176dd15-fed6-455f-801c-5b7284dc93bc",
-        "company": "US Tech Co",
-        "status": "New",
-        "found_at": "2026-02-18 05:53"
     }
 ]
