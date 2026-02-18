@@ -1,5 +1,47 @@
 [
     {
+        "title": "Articulate - Senior Data Analyst, Product - Lever",
+        "url": "https://jobs.lever.co/articulate/8c7b81bc-30a8-4e8d-aa6f-30e8fc962793",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 07:42"
+    },
+    {
+        "title": "CertiK - Business Data Analyst - Lever",
+        "url": "https://jobs.lever.co/certik/20f8e282-fd1a-4f17-8dcf-358e2200c1cf",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 07:42"
+    },
+    {
+        "title": "Data Analyst - Bluesight - Lever",
+        "url": "https://jobs.lever.co/bluesight/bc3ebf19-0555-4ca9-97d0-ab9250da1f57/apply",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 07:42"
+    },
+    {
+        "title": "Altarum - Principal Data Engineer \u2013 ML Platforms - Lever",
+        "url": "https://jobs.lever.co/altarum/d09a7278-a8cf-4531-9e1c-63c9be025b5d",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 07:42"
+    },
+    {
+        "title": "Senior Data Analyst - US Remote, Contract - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/dept/jobs/7517013",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 07:42"
+    },
+    {
+        "title": "Job Application for Lead Analytics Engineer, Business Intelligence ...",
+        "url": "https://boards.greenhouse.io/bark/jobs/7403055?gh_jid=7403055",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 07:42"
+    },
+    {
         "title": "The Voleon Group - Data Analyst - Lever",
         "url": "https://jobs.lever.co/voleon/e47d5699-5c1a-4b17-bbf4-c948efc0151d",
         "company": "US Tech Co",
@@ -306,47 +348,5 @@
         "company": "US Tech Co",
         "status": "Best_Archived",
         "found_at": "2026-02-17 22:18"
-    },
-    {
-        "title": "Job Application for Power BI Developer at Accenture Federal Services",
-        "url": "https://job-boards.greenhouse.io/accenturefederalservices/jobs/4653616006",
-        "company": "Accenture Federal Services",
-        "status": "Best_Archived",
-        "found_at": "2026-02-17 22:18"
-    },
-    {
-        "title": "Job Application for Dynamics 365 Power BI Engineer at Accenture ...",
-        "url": "https://job-boards.greenhouse.io/accenturefederalservices/jobs/4604421006?gh_jid=4604421006",
-        "company": "Accenture ...",
-        "status": "Best_Archived",
-        "found_at": "2026-02-17 22:18"
-    },
-    {
-        "title": "Data Visualization / Power BI Expert - Apply for this job - Greenhouse",
-        "url": "http://job-boards.greenhouse.io/gapinternational/jobs/5197223004",
-        "company": "US Tech Co",
-        "status": "Best_Archived",
-        "found_at": "2026-02-17 22:18"
-    },
-    {
-        "title": "Job Application for Business Intelligence Analyst - Senior at Luminis ...",
-        "url": "https://boards.greenhouse.io/luminishealth/jobs/4953868008",
-        "company": "Luminis ...",
-        "status": "Best_Archived",
-        "found_at": "2026-02-17 22:18"
-    },
-    {
-        "title": "Job Application for Senior Business Intelligence Analyst at StarRez",
-        "url": "https://boards.greenhouse.io/starrez/jobs/5118067008",
-        "company": "StarRez",
-        "status": "Best_Archived",
-        "found_at": "2026-02-17 21:24"
-    },
-    {
-        "title": "Job Application for FP&A Systems & Business Intelligence Lead at ...",
-        "url": "https://boards.greenhouse.io/geniussports/jobs/7513367003?gh_jid=7513367003",
-        "company": "...",
-        "status": "Best_Archived",
-        "found_at": "2026-02-17 21:24"
     }
 ]
