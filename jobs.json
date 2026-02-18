@@ -1,5 +1,68 @@
 [
     {
+        "title": "The Information Lab - The Data School NY - Data Analyst Consultant",
+        "url": "https://jobs.lever.co/theinformationlab/eaa64bb6-30b9-44bf-a490-3a2ea9754c13",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 09:35"
+    },
+    {
+        "title": "Data Analyst - Neighbor - Lever",
+        "url": "https://jobs.lever.co/neighbor/dc1bb13c-4909-440b-b542-761c5cf4be84/apply",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 09:35"
+    },
+    {
+        "title": "PointClickCare - Principal Java Data Engineer - Lever",
+        "url": "https://jobs.lever.co/pointclickcare/27ea212e-092c-4567-bb56-fc17a71fcc4c/apply",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 09:35"
+    },
+    {
+        "title": "Senior Data Analyst (Finance, Strategy & Analytics) - Toast",
+        "url": "https://job-boards.greenhouse.io/toast/jobs/7584593",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 09:35"
+    },
+    {
+        "title": "Job Application for Data Analyst at Swish Analytics - Greenhouse",
+        "url": "http://job-boards.greenhouse.io/swishanalytics/jobs/4650373005",
+        "company": "Swish Analytics",
+        "status": "New",
+        "found_at": "2026-02-18 09:35"
+    },
+    {
+        "title": "Sr Business Intelligence Developer | Power BI (Remote) - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/trace3/jobs/7595018",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 09:35"
+    },
+    {
+        "title": "Consultant - Senior Power BI/Microsoft Fabric Security Engineer",
+        "url": "http://job-boards.greenhouse.io/kallesgroup/jobs/8026975002",
+        "company": "US Tech Co",
+        "status": "New",
+        "found_at": "2026-02-18 09:35"
+    },
+    {
+        "title": "Job Application for Power BI Specialist at Witherite Law Group",
+        "url": "https://job-boards.greenhouse.io/witheritelawgroup/jobs/5080609008",
+        "company": "Witherite Law Group",
+        "status": "New",
+        "found_at": "2026-02-18 09:35"
+    },
+    {
+        "title": "Job Application for Senior Power BI Developer at 9th Way Insignia",
+        "url": "https://job-boards.greenhouse.io/9thwayinsignia/jobs/5032205008",
+        "company": "9th Way Insignia",
+        "status": "New",
+        "found_at": "2026-02-18 09:35"
+    },
+    {
         "title": "Job Application for Data Analyst, Revenue Operations at OnBoard",
         "url": "https://job-boards.greenhouse.io/onboardmeetings/jobs/5799430004",
         "company": "OnBoard",
@@ -285,68 +348,5 @@
         "company": "US Tech Co",
         "status": "New",
         "found_at": "2026-02-18 01:08"
-    },
-    {
-        "title": "Senior Data Analyst - Remote - US",
-        "url": "https://job-boards.greenhouse.io/samsara/jobs/7386898",
-        "company": "US Tech Co",
-        "status": "New",
-        "found_at": "2026-02-18 01:08"
-    },
-    {
-        "title": "Job Application for Reporting Data Analyst at Solera Health",
-        "url": "https://job-boards.greenhouse.io/solera/jobs/7600415",
-        "company": "Solera Health",
-        "status": "New",
-        "found_at": "2026-02-18 01:08"
-    },
-    {
-        "title": "Onchain Data Analyst | Full-time - Consensys",
-        "url": "https://job-boards.greenhouse.io/consensys/jobs/7461446",
-        "company": "US Tech Co",
-        "status": "New",
-        "found_at": "2026-02-18 01:08"
-    },
-    {
-        "title": "Job Application for Data Analyst at Bolt.new - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/stackblitz/jobs/4111255009",
-        "company": "Bolt.new",
-        "status": "New",
-        "found_at": "2026-02-18 01:08"
-    },
-    {
-        "title": "Senior Power BI Application Developer - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/goodsservices/jobs/7568024003",
-        "company": "US Tech Co",
-        "status": "New",
-        "found_at": "2026-02-18 01:08"
-    },
-    {
-        "title": "Big Health - Product Data Analyst Contractor - Lever",
-        "url": "https://jobs.lever.co/bighealth/df90b04a-b4bc-4e2a-9ea2-4085104098cf",
-        "company": "US Tech Co",
-        "status": "New",
-        "found_at": "2026-02-17 23:18"
-    },
-    {
-        "title": "Rackspace - GCP Data Analyst - BigQuery (USA)",
-        "url": "https://jobs.lever.co/rackspace/add2e661-64f2-4ef7-8ca4-47217dddaa10",
-        "company": "US Tech Co",
-        "status": "New",
-        "found_at": "2026-02-17 23:18"
-    },
-    {
-        "title": "Job Application for Power BI Developer at Accenture Federal Services",
-        "url": "https://job-boards.greenhouse.io/accenturefederalservices/jobs/4653637006",
-        "company": "Accenture Federal Services",
-        "status": "New",
-        "found_at": "2026-02-17 23:18"
-    },
-    {
-        "title": "Job Application for Power BI Developer (4897) at ESS - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/ess/jobs/7564663003",
-        "company": "ESS",
-        "status": "New",
-        "found_at": "2026-02-17 23:18"
     }
 ]
