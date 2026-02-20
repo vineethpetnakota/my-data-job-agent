@@ -6,13 +6,13 @@ from datetime import datetime, timedelta
 SERPER_KEY = os.getenv("SERPER_API_KEY")
 
 def get_jobs():
-    """Step 1: Hunt 15-20 quality jobs by limiting results per role."""
+    """Step 1: Hunt 15-20 quality jobs across multi-site platforms including Power BI."""
+    # We use OR to find any of the three roles in one query per site
     queries = [
-        'intitle:"Data Analyst" "United States" site:jobs.lever.co',
-        'intitle:"Data Engineer" "United States" site:jobs.lever.co',
-        'intitle:"Data Analyst" "United States" site:job-boards.greenhouse.io',
-        'intitle:"Power BI" "United States" site:job-boards.greenhouse.io',
-        'intitle:"Business Intelligence" "United States" site:boards.greenhouse.io'
+        'intitle:("Data Analyst" OR "Data Engineer" OR "Power BI") "United States" site:ashbyhq.com',
+        'intitle:("Data Analyst" OR "Data Engineer" OR "Power BI") "United States" site:smartrecruiters.com',
+        'intitle:("Data Analyst" OR "Data Engineer" OR "Power BI") "United States" site:breezy.hr',
+        'intitle:("Data Analyst" OR "Data Engineer" OR "Power BI") "United States" site:workable.com'
     ]
     
     url = "https://google.serper.dev/search"
@@ -21,8 +21,9 @@ def get_jobs():
 
     for q in queries:
         try:
-            # Setting num: 4 for 5 queries = 20 potential leads
-            res = requests.post(url, headers=headers, json={"q": q, "num": 4, "tbs": "qdr:d"})
+            # We set num: 5 to get ~20 fresh leads total across 4 sites
+            # 'tbs': 'qdr:d' ensures only jobs from the last 24 hours are found
+            res = requests.post(url, headers=headers, json={"q": q, "num": 5, "tbs": "qdr:d"})
             organic = res.json().get('organic', [])
             all_results.extend(organic)
         except:
@@ -38,11 +39,11 @@ def update_database(new_raw_leads):
             try: database = json.load(f)
             except: database = []
 
-    # Step 4: Update History (Cleanup jobs older than 72 hours)
+    # Step 4: Update History (Cleanup leads older than 72 hours)
     three_days_ago = datetime.now() - timedelta(days=3)
     database = [j for j in database if datetime.strptime(j['found_at'], "%Y-%m-%d %H:%M") > three_days_ago]
 
-    # Step 5: 6PM LOCK (23:00 UTC) - Move 'New' to 'Best_Archived' for Morning Review
+    # Step 5: 6PM Morning Review Lock (23:00 UTC)
     if datetime.now().hour == 23:
         for job in database:
             if job['status'] == 'New':
@@ -56,25 +57,29 @@ def update_database(new_raw_leads):
         url = lead.get('link')
         if url and url not in existing_urls:
             title = lead.get('title', 'Unknown Role')
-            # Extracting posting time metadata from Google
-            posted_time = lead.get('date', 'Just now') 
+            snippet = lead.get('snippet', '')
             
+            # Step 2: Extracting real posting time hint for dashboard display
+            posted_at = lead.get('date', 'Recently')
+            if "ago" in snippet and posted_at == "Recently":
+                posted_at = snippet.split("—")[0].strip()
+
             new_entries.append({
                 "title": title,
                 "url": url,
-                "company": title.split(" at ")[-1].split(" - ")[0] if " at " in title else "US Company",
+                "company": title.split(" at ")[-1].split(" - ")[0] if " at " in title else "Hiring Co",
                 "status": "New",
-                "posted_at": posted_time, # STEP 2
+                "posted_at": posted_at,
                 "found_at": datetime.now().strftime("%Y-%m-%d %H:%M")
             })
             existing_urls.add(url)
 
-    # Step 3: Replace logic - New entries go to the top, capped at 50 total
+    # Step 3: Replace old jobs (Keep top 50 freshest)
     database = (new_entries + database)[:50]
 
     with open(file_path, 'w') as f:
         json.dump(database, f, indent=4)
-    print(f"✅ Success: {len(new_entries)} new leads. Total database: {len(database)}")
+    print(f"✅ Success: {len(new_entries)} leads added.")
 
 if __name__ == "__main__":
     update_database(get_jobs())
