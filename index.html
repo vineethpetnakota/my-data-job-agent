@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Pipeline | Dark Mode</title>
+    <title>US Data Hunter | Pro Dashboard</title>
     <style>
         :root {
             --bg: #0f172a;
@@ -17,114 +17,82 @@
         }
 
         body { 
-            font-family: 'Inter', -apple-system, system-ui, sans-serif; 
-            background-color: var(--bg); 
-            color: var(--text-main); 
-            margin: 0; 
-            padding: 20px;
-            line-height: 1.5;
+            font-family: 'Inter', -apple-system, sans-serif; 
+            background: var(--bg); color: var(--text-main); 
+            margin: 0; padding: 20px; 
         }
 
-        .container { max-width: 900px; margin: auto; }
+        .container { max-width: 850px; margin: auto; }
 
         header { 
-            margin-bottom: 40px; 
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            margin-bottom: 40px; border-bottom: 1px solid var(--border); 
+            padding-bottom: 20px; 
         }
 
         h1 { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.025em; margin: 0; }
-        .stats-label { font-size: 0.85rem; color: var(--text-dim); }
-
+        
         .section { margin-bottom: 48px; }
         
         h2 { 
-            font-size: 0.75rem; 
-            text-transform: uppercase; 
-            letter-spacing: 0.1em; 
-            color: var(--text-dim); 
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; 
+            color: var(--text-dim); margin-bottom: 16px; 
+            display: flex; align-items: center; gap: 8px;
         }
-
-        .job-grid { display: grid; gap: 12px; }
 
         .job-card { 
-            background: var(--card-bg); 
-            border: 1px solid var(--border);
-            border-radius: 12px; 
-            padding: 16px 20px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center;
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            background: var(--card-bg); border: 1px solid var(--border);
+            border-radius: 12px; padding: 16px 20px; 
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 12px; transition: transform 0.2s ease, border-color 0.2s ease;
         }
 
-        .job-card:hover { 
-            transform: translateY(-2px); 
-            border-color: var(--accent-blue);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-        }
+        .job-card:hover { transform: translateY(-2px); border-color: var(--accent-blue); }
 
-        .company { font-weight: 700; font-size: 1.1rem; color: var(--text-main); }
+        .company { font-weight: 700; font-size: 1.1rem; }
         .title { display: block; color: var(--text-dim); font-size: 0.95rem; margin-top: 2px; }
         
-        .meta-row { display: flex; gap: 12px; margin-top: 8px; align-items: center; }
+        .meta-row { display: flex; gap: 15px; margin-top: 10px; align-items: center; }
         
-        .badge { 
-            font-size: 0.65rem; 
-            font-weight: 700; 
-            padding: 2px 8px; 
-            border-radius: 9999px; 
-            text-transform: uppercase;
+        .posted-tag { 
+            font-size: 0.75rem; color: var(--accent-emerald); font-weight: 700; 
+            background: rgba(16, 185, 129, 0.1); padding: 2px 8px; border-radius: 4px;
         }
-        .bg-new { background: rgba(16, 185, 129, 0.1); color: var(--accent-emerald); border: 1px solid var(--accent-emerald); }
+
+        .found-tag { font-size: 0.7rem; color: var(--text-dim); }
+
+        .badge { 
+            font-size: 0.65rem; font-weight: 700; padding: 2px 8px; 
+            border-radius: 9999px; text-transform: uppercase;
+        }
+        .bg-new { background: rgba(59, 130, 246, 0.1); color: var(--accent-blue); border: 1px solid var(--accent-blue); }
         .bg-saved { background: rgba(245, 158, 11, 0.1); color: var(--accent-amber); border: 1px solid var(--accent-amber); }
-        
-        .time-hint { font-size: 0.75rem; color: var(--text-dim); display: flex; align-items: center; gap: 4px; }
 
         .btn { 
-            background: var(--accent-blue); 
-            color: white; 
-            text-decoration: none; 
-            padding: 10px 20px; 
-            border-radius: 8px; 
-            font-size: 0.875rem; 
-            font-weight: 600; 
-            transition: background 0.2s ease;
+            background: var(--accent-blue); color: white; text-decoration: none; 
+            padding: 10px 20px; border-radius: 8px; font-size: 0.875rem; font-weight: 600;
         }
-        .btn:hover { background: #2563eb; }
-
-        .empty-state { padding: 20px; border: 1px dashed var(--border); border-radius: 12px; text-align: center; color: var(--text-dim); font-size: 0.85rem; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <div>
-                <h1>🛰️ Data Pipeline</h1>
-                <p class="stats-label">Real-time tracking: Data Analyst, Engineer, & Power BI</p>
-            </div>
+            <h1>📡 US Data Role Pipeline</h1>
+            <p style="color: var(--text-dim); margin-top: 5px;">Monitoring Data & Power BI leads from top US platforms.</p>
         </header>
 
         <div class="section">
-            <h2><span style="color: var(--accent-emerald)">●</span> Live Leads (Recent)</h2>
-            <div id="new-leads" class="job-grid"></div>
+            <h2><span style="color: var(--accent-emerald)">●</span> Live Leads (Recent Finds)</h2>
+            <div id="new-leads"></div>
         </div>
 
         <div class="section">
-            <h2><span style="color: var(--accent-amber)">●</span> Morning Review (6PM Archive)</h2>
-            <div id="saved-leads" class="job-grid"></div>
+            <h2><span style="color: var(--accent-amber)">●</span> Morning Review (Saved at 6PM)</h2>
+            <div id="saved-leads"></div>
         </div>
 
         <div class="section">
-            <h2><span style="color: var(--text-dim)">●</span> History (72 Hours)</h2>
-            <div id="history-leads" class="job-grid"></div>
+            <h2><span style="color: var(--text-dim)">●</span> Full History (72 Hours)</h2>
+            <div id="history-leads"></div>
         </div>
     </div>
 
@@ -144,16 +112,15 @@
                     let section = containers['Archive'];
                     let badge = '';
 
-                    // Logic based on status from hunter.py
                     if (job.status === 'New') {
                         section = containers['New'];
                         badge = '<span class="badge bg-new">Live</span>';
                     } else if (job.status === 'Best_Archived') {
                         section = containers['Best_Archived'];
-                        badge = '<span class="badge bg-saved">Saved</span>';
+                        badge = '<span class="badge bg-saved">Reviewed</span>';
                     }
 
-                    const html = `
+                    section.innerHTML += `
                         <div class="job-card">
                             <div>
                                 <div style="display: flex; align-items: center; gap: 10px;">
@@ -162,22 +129,15 @@
                                 </div>
                                 <span class="title">${job.title}</span>
                                 <div class="meta-row">
-                                    <span class="time-hint">⏱️ Found: ${job.found_at}</span>
+                                    <span class="posted-tag">⏱️ Published: ${job.posted_at || 'Recently'}</span>
+                                    <span class="found-tag">Detected: ${job.found_at}</span>
                                 </div>
                             </div>
-                            <a href="${job.url}" target="_blank" class="btn">Apply Now</a>
+                            <a href="${job.url}" target="_blank" class="btn">Apply</a>
                         </div>
                     `;
-                    section.innerHTML += html;
                 });
-
-                Object.values(containers).forEach(c => {
-                    if (c.innerHTML === '') c.innerHTML = '<div class="empty-state">No listings currently tracked in this category.</div>';
-                });
-
-            } catch (err) {
-                console.error("Pipeline Sync Error:", err);
-            }
+            } catch (err) { console.error("Database sync error:", err); }
         }
         fetchJobs();
     </script>
