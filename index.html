@@ -3,38 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Hunter Dashboard</title>
+    <title>Power BI & Data Role Dashboard</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; margin: 0; padding: 20px; color: #333; }
-        .container { max-width: 900px; margin: auto; }
-        .section { background: white; border-radius: 10px; padding: 20px; margin-bottom: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; font-size: 1.1rem; color: #2c3e50; text-transform: uppercase; }
-        .job-card { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #f9f9f9; }
-        .job-card:last-child { border-bottom: none; }
-        .company { font-weight: bold; color: #1a73e8; font-size: 1rem; }
-        .title { display: block; color: #5f6368; font-size: 0.9rem; margin-top: 3px; }
-        .posted-time { color: #d93025; font-weight: 600; font-size: 0.8rem; margin-top: 5px; display: block; }
-        .btn { background: #1a73e8; color: white; text-decoration: none; padding: 8px 16px; border-radius: 5px; font-size: 0.85rem; font-weight: 500; }
-        .btn:hover { background: #1557b0; }
-        .badge { font-size: 0.7rem; padding: 3px 7px; border-radius: 4px; color: white; margin-left: 10px; vertical-align: middle; }
-        .bg-live { background: #34a853; }
-        .bg-saved { background: #f9ab00; }
+        body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #1e293b; padding: 20px; }
+        .container { max-width: 850px; margin: auto; }
+        .section { background: white; border-radius: 12px; padding: 20px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        h2 { font-size: 1rem; text-transform: uppercase; color: #64748b; border-bottom: 1px solid #f1f5f9; padding-bottom: 10px; }
+        .job-card { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
+        .company { font-weight: 700; color: #0f172a; }
+        .title { display: block; color: #475569; font-size: 0.9rem; }
+        .posted-hint { font-size: 0.75rem; color: #10b981; font-weight: 600; margin-top: 4px; display: block; }
+        .badge { font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; color: white; margin-left: 8px; vertical-align: middle; }
+        .bg-new { background: #10b981; }
+        .bg-saved { background: #f59e0b; }
+        .btn { background: #2563eb; color: white; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; }
     </style>
 </head>
 <body>
     <div class="container">
-        <header style="margin-bottom: 30px;">
-            <h1 style="margin:0;">🎯 Data Pipeline</h1>
-            <p style="color: #70757a;">Hunting 15-20 quality leads every hour</p>
-        </header>
-
+        <h1>🎯 Power BI & Data Pipeline</h1>
+        <p style="color: #64748b;">Tracking 15-20 leads from Ashby, SmartRecruiters, and more.</p>
+        
         <div class="section">
-            <h2>🚀 Latest Leads (Live)</h2>
+            <h2>🚀 Live Leads (Last Hour)</h2>
             <div id="new-leads"></div>
         </div>
 
         <div class="section">
-            <h2>📂 Morning Review (Saved at 6PM)</h2>
+            <h2>📂 Morning Review (6PM Archive)</h2>
             <div id="saved-leads"></div>
         </div>
 
@@ -49,7 +45,6 @@
             try {
                 const response = await fetch('jobs.json');
                 const jobs = await response.json();
-                
                 const containers = {
                     'New': document.getElementById('new-leads'),
                     'Best_Archived': document.getElementById('saved-leads'),
@@ -59,34 +54,26 @@
                 jobs.forEach(job => {
                     let section = containers['Archive'];
                     let badge = '';
-
                     if (job.status === 'New') {
                         section = containers['New'];
-                        badge = '<span class="badge bg-live">LIVE</span>';
+                        badge = '<span class="badge bg-new">LIVE</span>';
                     } else if (job.status === 'Best_Archived') {
                         section = containers['Best_Archived'];
                         badge = '<span class="badge bg-saved">SAVED</span>';
                     }
 
-                    const html = `
+                    section.innerHTML += `
                         <div class="job-card">
                             <div>
                                 <span class="company">${job.company}</span>${badge}
                                 <span class="title">${job.title}</span>
-                                <span class="posted-time">⏱️ Posted: ${job.posted_at || 'Recently'}</span>
+                                <span class="posted-hint">⏱️ Posted: ${job.posted_at || 'Recently'}</span>
                             </div>
-                            <a href="${job.url}" target="_blank" class="btn">Apply Now</a>
+                            <a href="${job.url}" target="_blank" class="btn">Apply</a>
                         </div>
                     `;
-                    section.innerHTML += html;
                 });
-
-                // Display empty messages if no jobs found
-                Object.values(containers).forEach(c => {
-                    if (c.innerHTML === '') c.innerHTML = '<p style="color:#999; font-size:0.9rem;">No jobs currently in this section.</p>';
-                });
-
-            } catch (err) { console.error("Error loading jobs:", err); }
+            } catch (e) { console.error(e); }
         }
         fetchJobs();
     </script>
