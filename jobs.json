@@ -1,5 +1,13 @@
 [
     {
+        "title": "Job Application for Staff Data Engineer at Dragos - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/dragos/jobs/5078946008",
+        "company": "Dragos",
+        "status": "New",
+        "posted_at": "15 minutes ago",
+        "found_at": "2026-02-20 18:31"
+    },
+    {
         "title": "Job Application for Data Engineer at Abacus Insights - Greenhouse",
         "url": "https://job-boards.greenhouse.io/abacusinsights/jobs/8421683002",
         "company": "Abacus Insights",
@@ -382,12 +390,5 @@
         "company": "US Tech Co",
         "status": "Best_Archived",
         "found_at": "2026-02-18 21:26"
-    },
-    {
-        "title": "Articulate - Senior Data Analyst, Product - Lever",
-        "url": "https://jobs.lever.co/articulate/8c7b81bc-30a8-4e8d-aa6f-30e8fc962793/apply",
-        "company": "US Tech Co",
-        "status": "Best_Archived",
-        "found_at": "2026-02-18 20:26"
     }
 ]
