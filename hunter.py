@@ -6,13 +6,18 @@ from datetime import datetime, timedelta
 SERPER_KEY = os.getenv("SERPER_API_KEY")
 
 def get_jobs():
-    """Step 1: Hunt 15-20 quality jobs across multi-site platforms including Power BI."""
-    # We use OR to find any of the three roles in one query per site
+    """Step 1: Hunt 20-25 quality jobs across ALL platforms (Greenhouse, Lever, Ashby, etc.)"""
+    # Consolidated roles into one string to save API credits
+    roles = '("Data Analyst" OR "Data Engineer" OR "Power BI")'
+    
+    # Searching the 6 best platforms for tech roles
     queries = [
-        'intitle:("Data Analyst" OR "Data Engineer" OR "Power BI") "United States" site:ashbyhq.com',
-        'intitle:("Data Analyst" OR "Data Engineer" OR "Power BI") "United States" site:smartrecruiters.com',
-        'intitle:("Data Analyst" OR "Data Engineer" OR "Power BI") "United States" site:breezy.hr',
-        'intitle:("Data Analyst" OR "Data Engineer" OR "Power BI") "United States" site:workable.com'
+        f'intitle:{roles} "United States" site:jobs.lever.co',
+        f'intitle:{roles} "United States" site:job-boards.greenhouse.io',
+        f'intitle:{roles} "United States" site:ashbyhq.com',
+        f'intitle:{roles} "United States" site:smartrecruiters.com',
+        f'intitle:{roles} "United States" site:breezy.hr',
+        f'intitle:{roles} "United States" site:workable.com'
     ]
     
     url = "https://google.serper.dev/search"
@@ -21,9 +26,9 @@ def get_jobs():
 
     for q in queries:
         try:
-            # We set num: 5 to get ~20 fresh leads total across 4 sites
-            # 'tbs': 'qdr:d' ensures only jobs from the last 24 hours are found
-            res = requests.post(url, headers=headers, json={"q": q, "num": 5, "tbs": "qdr:d"})
+            # Getting 4 results per platform = ~24 total high-quality leads
+            # 'tbs':'qdr:d' ensures we only get jobs posted in the last 24 hours
+            res = requests.post(url, headers=headers, json={"q": q, "num": 4, "tbs": "qdr:d"})
             organic = res.json().get('organic', [])
             all_results.extend(organic)
         except:
@@ -39,7 +44,7 @@ def update_database(new_raw_leads):
             try: database = json.load(f)
             except: database = []
 
-    # Step 4: Update History (Cleanup leads older than 72 hours)
+    # Step 4: Cleanup (Delete leads older than 72 hours)
     three_days_ago = datetime.now() - timedelta(days=3)
     database = [j for j in database if datetime.strptime(j['found_at'], "%Y-%m-%d %H:%M") > three_days_ago]
 
@@ -49,7 +54,7 @@ def update_database(new_raw_leads):
             if job['status'] == 'New':
                 job['status'] = 'Best_Archived'
 
-    # Step 2 & 3: Capture timings and Replace old with new
+    # Step 2 & 3: Capture timings and deduplicate
     existing_urls = {j['url'] for j in database}
     new_entries = []
     
@@ -59,7 +64,7 @@ def update_database(new_raw_leads):
             title = lead.get('title', 'Unknown Role')
             snippet = lead.get('snippet', '')
             
-            # Step 2: Extracting real posting time hint for dashboard display
+            # Extract real posting time (e.g., "4 hours ago") from the snippet
             posted_at = lead.get('date', 'Recently')
             if "ago" in snippet and posted_at == "Recently":
                 posted_at = snippet.split("—")[0].strip()
@@ -67,19 +72,19 @@ def update_database(new_raw_leads):
             new_entries.append({
                 "title": title,
                 "url": url,
-                "company": title.split(" at ")[-1].split(" - ")[0] if " at " in title else "Hiring Co",
+                "company": title.split(" at ")[-1].split(" - ")[0] if " at " in title else "Hiring Company",
                 "status": "New",
                 "posted_at": posted_at,
                 "found_at": datetime.now().strftime("%Y-%m-%d %H:%M")
             })
             existing_urls.add(url)
 
-    # Step 3: Replace old jobs (Keep top 50 freshest)
+    # Step 3: Replace old jobs (Always keep the 50 freshest total)
     database = (new_entries + database)[:50]
 
     with open(file_path, 'w') as f:
         json.dump(database, f, indent=4)
-    print(f"✅ Success: {len(new_entries)} leads added.")
+    print(f"✅ Success: {len(new_entries)} fresh leads across all platforms.")
 
 if __name__ == "__main__":
     update_database(get_jobs())
