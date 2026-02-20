@@ -1,5 +1,45 @@
 [
     {
+        "title": "Jobgether - Channel Program Manager A/V - Lever",
+        "url": "https://jobs.lever.co/jobgether/1b53797f-129c-4cf6-bbba-29a3d5056e3d",
+        "company": "Hiring Company",
+        "status": "New",
+        "posted_at": "20 hours ago",
+        "found_at": "2026-02-20 16:23"
+    },
+    {
+        "title": "Principal Data Engineer, Data Architecture - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/rockstargames/jobs/7619983003",
+        "company": "Hiring Company",
+        "status": "New",
+        "posted_at": "21 hours ago",
+        "found_at": "2026-02-20 16:23"
+    },
+    {
+        "title": "Job Application for Data Engineer at Attention Arc - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/attentionarc/jobs/7625397",
+        "company": "Attention Arc",
+        "status": "New",
+        "posted_at": "4 hours ago",
+        "found_at": "2026-02-20 16:23"
+    },
+    {
+        "title": "Miratech Senior Data Engineer | SmartRecruiters",
+        "url": "https://www.smartrecruiters.com/Miratech1/744000110128726-senior-data-engineer",
+        "company": "Hiring Company",
+        "status": "New",
+        "posted_at": "20 hours ago",
+        "found_at": "2026-02-20 16:23"
+    },
+    {
+        "title": "Miratech Senior Java Developer | SmartRecruiters",
+        "url": "https://jobs.smartrecruiters.com/Miratech1/744000109555265-senior-java-developer",
+        "company": "Hiring Company",
+        "status": "New",
+        "posted_at": "6 hours ago",
+        "found_at": "2026-02-20 16:23"
+    },
+    {
         "title": "Senior Software and Data Engineer @ Element 84 - Jobs",
         "url": "https://jobs.ashbyhq.com/element84/612d75ee-5423-4bc7-89e0-50a7eb78363e/application",
         "company": "Hiring Co",
@@ -343,40 +383,5 @@
         "company": "US Tech Co",
         "status": "Best_Archived",
         "found_at": "2026-02-18 20:26"
-    },
-    {
-        "title": "The Information Lab - The Data School NY - Data Analyst Consultant",
-        "url": "https://jobs.lever.co/theinformationlab/eaa64bb6-30b9-44bf-a490-3a2ea9754c13",
-        "company": "US Tech Co",
-        "status": "Best_Archived",
-        "found_at": "2026-02-18 19:39"
-    },
-    {
-        "title": "Data Analyst - Neighbor - Lever",
-        "url": "https://jobs.lever.co/neighbor/dc1bb13c-4909-440b-b542-761c5cf4be84/apply",
-        "company": "US Tech Co",
-        "status": "Best_Archived",
-        "found_at": "2026-02-18 19:39"
-    },
-    {
-        "title": "PointClickCare - Principal Java Data Engineer - Lever",
-        "url": "https://jobs.lever.co/pointclickcare/27ea212e-092c-4567-bb56-fc17a71fcc4c/apply",
-        "company": "US Tech Co",
-        "status": "Best_Archived",
-        "found_at": "2026-02-18 19:39"
-    },
-    {
-        "title": "Senior Data Analyst (Finance, Strategy & Analytics) - Toast",
-        "url": "https://job-boards.greenhouse.io/toast/jobs/7584593",
-        "company": "US Tech Co",
-        "status": "Best_Archived",
-        "found_at": "2026-02-18 19:39"
-    },
-    {
-        "title": "Job Application for Data Analyst at Oddball - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/oddball/jobs/7581509003",
-        "company": "Oddball",
-        "status": "Best_Archived",
-        "found_at": "2026-02-18 19:39"
     }
 ]
