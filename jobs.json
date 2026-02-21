@@ -1,5 +1,21 @@
 [
     {
+        "title": "ComputerCare - Data Analyst II - Lever",
+        "url": "https://jobs.lever.co/computercare/d055b8be-76dd-48f7-99fb-7f51bc7600a3",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "50 minutes ago",
+        "found_at": "2026-02-21 01:01"
+    },
+    {
+        "title": "Data Analyst, Agency @ Trellis Technologies - Jobs",
+        "url": "https://jobs.ashbyhq.com/savvyinsurance-trellis/62f53309-6e4c-4eba-bbc8-bb7f5a2afd19/application",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "2 hours ago",
+        "found_at": "2026-02-21 01:01"
+    },
+    {
         "title": "Job Application for Data Engineer at Attention Arc - Greenhouse",
         "url": "https://job-boards.greenhouse.io/attentionarc/jobs/7625481",
         "company": "Attention Arc",
@@ -382,21 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "15 hours ago",
         "found_at": "2026-02-18 22:03"
-    },
-    {
-        "title": "Job Application for Data Analyst at LTK USA - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/shopltk/jobs/7634080003",
-        "company": "LTK USA",
-        "status": "Best_Archived",
-        "posted_at": "20 hours ago",
-        "found_at": "2026-02-18 21:42"
-    },
-    {
-        "title": "Lead Data Analyst, Devices (Experimentation) - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/life360/jobs/8426448002",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "19 hours ago",
-        "found_at": "2026-02-18 21:42"
     }
 ]
