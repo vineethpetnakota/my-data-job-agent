@@ -1,5 +1,13 @@
 [
     {
+        "title": "Job Application for Sr. Data Engineer at Abacus Insights - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/abacusinsights/jobs/8424247002",
+        "company": "Abacus Insights",
+        "status": "New",
+        "posted_at": "16 hours ago",
+        "found_at": "2026-02-21 06:28"
+    },
+    {
         "title": "Staff Data Engineer, Enterprise Data Analytics @ Chainalysis - Jobs",
         "url": "https://jobs.ashbyhq.com/chainalysis-careers/bb4e2bf4-8e2b-4db7-b4e5-8c495df0b235/application?ref=DecentraJobs&utm_source=DecentraJobs&utm_term=DecentraJobs&source=DecentraJobs",
         "company": "US Company",
@@ -390,13 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "3 hours ago",
         "found_at": "2026-02-19 14:01"
-    },
-    {
-        "title": "Senior/Lead BI Data Analyst (Data modeling) - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/exadelinc/jobs/5802696004",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "17 hours ago",
-        "found_at": "2026-02-19 07:41"
     }
 ]
