@@ -1,5 +1,13 @@
 [
     {
+        "title": "Job Application for Analytics Architect at Greenhouse",
+        "url": "https://job-boards.greenhouse.io/greenhouse/jobs/7615662",
+        "company": "Greenhouse",
+        "status": "New",
+        "posted_at": "5 hours ago",
+        "found_at": "2026-02-21 09:19"
+    },
+    {
         "title": "Job Application for Senior Data Engineer at Abacus Insights",
         "url": "https://job-boards.greenhouse.io/abacusinsights/jobs/8424177002",
         "company": "Abacus Insights",
@@ -390,13 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "2 hours ago",
         "found_at": "2026-02-20 01:03"
-    },
-    {
-        "title": "Cority - Staff Data Engineer - Lever",
-        "url": "https://jobs.lever.co/cority/b7a25afb-bd29-495d-bdcf-c96ef5a481a6/apply?lever-origin=applied&lever-source%5B%5D=Jobgether&utm_campaign=search&utm_medium=website",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "9 hours ago",
-        "found_at": "2026-02-19 23:19"
     }
 ]
