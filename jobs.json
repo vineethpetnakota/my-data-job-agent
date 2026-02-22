@@ -1,5 +1,13 @@
 [
     {
+        "title": "Job Application for VP of Sales at HP Hood - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/hoodhp/jobs/5125879008",
+        "company": "HP Hood",
+        "status": "New",
+        "posted_at": "9 hours ago",
+        "found_at": "2026-02-22 15:14"
+    },
+    {
         "title": "All Jobs - Feedzai Careers",
         "url": "https://job-boards.greenhouse.io/feedzai/jobs/7443182",
         "company": "US Company",
@@ -390,13 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "15 minutes ago",
         "found_at": "2026-02-20 18:31"
-    },
-    {
-        "title": "Job Application for Data Engineer at Abacus Insights - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/abacusinsights/jobs/8421683002",
-        "company": "Abacus Insights",
-        "status": "Best_Archived",
-        "posted_at": "12 hours ago",
-        "found_at": "2026-02-20 18:02"
     }
 ]
