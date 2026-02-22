@@ -1,5 +1,13 @@
 [
     {
+        "title": "Job Application for Accountant, Launch at SpaceX - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/spacex/jobs/8426303002",
+        "company": "SpaceX",
+        "status": "New",
+        "posted_at": "23 hours ago",
+        "found_at": "2026-02-22 13:36"
+    },
+    {
         "title": "Job Application for Senior Revenue Manager at Axon - Greenhouse",
         "url": "https://job-boards.greenhouse.io/axon/jobs/7629102003",
         "company": "Axon",
@@ -390,13 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "19 hours ago",
         "found_at": "2026-02-20 17:28"
-    },
-    {
-        "title": "Principal Data Engineer, Data Architecture - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/rockstargames/jobs/7637154003",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "21 hours ago",
-        "found_at": "2026-02-20 16:32"
     }
 ]
