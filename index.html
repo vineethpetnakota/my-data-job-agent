@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>US Data Hunter | Pro Dashboard</title>
+    <title>US Data Hunter | Dark Mode</title>
     <style>
         :root {
             --bg: #0f172a;
@@ -16,68 +16,30 @@
             --border: #334155;
         }
 
-        body { 
-            font-family: 'Inter', -apple-system, sans-serif; 
-            background: var(--bg); color: var(--text-main); 
-            margin: 0; padding: 20px; 
-        }
-
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text-main); margin: 0; padding: 20px; }
         .container { max-width: 850px; margin: auto; }
-
-        header { 
-            margin-bottom: 40px; border-bottom: 1px solid var(--border); 
-            padding-bottom: 20px; 
-        }
-
-        h1 { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.025em; margin: 0; }
-        
+        header { margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+        h1 { font-size: 1.75rem; font-weight: 800; margin: 0; }
         .section { margin-bottom: 48px; }
-        
-        h2 { 
-            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; 
-            color: var(--text-dim); margin-bottom: 16px; 
-            display: flex; align-items: center; gap: 8px;
-        }
-
-        .job-card { 
-            background: var(--card-bg); border: 1px solid var(--border);
-            border-radius: 12px; padding: 16px 20px; 
-            display: flex; justify-content: space-between; align-items: center;
-            margin-bottom: 12px; transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
+        h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+        .job-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; transition: transform 0.2s; }
         .job-card:hover { transform: translateY(-2px); border-color: var(--accent-blue); }
-
         .company { font-weight: 700; font-size: 1.1rem; }
         .title { display: block; color: var(--text-dim); font-size: 0.95rem; margin-top: 2px; }
-        
         .meta-row { display: flex; gap: 15px; margin-top: 10px; align-items: center; }
-        
-        .posted-tag { 
-            font-size: 0.75rem; color: var(--accent-emerald); font-weight: 700; 
-            background: rgba(16, 185, 129, 0.1); padding: 2px 8px; border-radius: 4px;
-        }
-
+        .posted-tag { font-size: 0.75rem; color: var(--accent-emerald); font-weight: 700; background: rgba(16, 185, 129, 0.1); padding: 2px 8px; border-radius: 4px; }
         .found-tag { font-size: 0.7rem; color: var(--text-dim); }
-
-        .badge { 
-            font-size: 0.65rem; font-weight: 700; padding: 2px 8px; 
-            border-radius: 9999px; text-transform: uppercase;
-        }
+        .badge { font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: 9999px; text-transform: uppercase; }
         .bg-new { background: rgba(59, 130, 246, 0.1); color: var(--accent-blue); border: 1px solid var(--accent-blue); }
         .bg-saved { background: rgba(245, 158, 11, 0.1); color: var(--accent-amber); border: 1px solid var(--accent-amber); }
-
-        .btn { 
-            background: var(--accent-blue); color: white; text-decoration: none; 
-            padding: 10px 20px; border-radius: 8px; font-size: 0.875rem; font-weight: 600;
-        }
+        .btn { background: var(--accent-blue); color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.875rem; font-weight: 600; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>📡 US Data Role Pipeline</h1>
-            <p style="color: var(--text-dim); margin-top: 5px;">Monitoring Data & Power BI leads from top US platforms.</p>
+            <p style="color: var(--text-dim); margin-top: 5px;">Strictly monitoring US-based Data Analyst, Engineer, & Power BI leads.</p>
         </header>
 
         <div class="section">
@@ -101,7 +63,6 @@
             try {
                 const response = await fetch('jobs.json');
                 const jobs = await response.json();
-                
                 const containers = {
                     'New': document.getElementById('new-leads'),
                     'Best_Archived': document.getElementById('saved-leads'),
@@ -137,7 +98,7 @@
                         </div>
                     `;
                 });
-            } catch (err) { console.error("Database sync error:", err); }
+            } catch (err) { console.error(err); }
         }
         fetchJobs();
     </script>
