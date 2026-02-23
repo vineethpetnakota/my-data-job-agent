@@ -1,5 +1,21 @@
 [
     {
+        "title": "My NRMA Data Engineer | SmartRecruiters",
+        "url": "https://jobs.smartrecruiters.com/MYNRMA/744000110669325-data-engineer",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "11 hours ago",
+        "found_at": "2026-02-23 19:49"
+    },
+    {
+        "title": "Sr. Financial Analyst | Terabase Energy - Jobs By Workable",
+        "url": "https://jobs.workable.com/view/j7WPZxG8qXa6QPW1TYoe3S/remote-sr.-financial-analyst-in-united-states-at-terabase-energy",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "19 minutes ago",
+        "found_at": "2026-02-23 19:49"
+    },
+    {
         "title": "Data Analyst - CandleScience - Application - Jobs By Workable",
         "url": "https://apply.workable.com/candlescience/j/0520469DE7/apply/",
         "company": "US Company",
@@ -382,21 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "17 hours ago",
         "found_at": "2026-02-21 08:17"
-    },
-    {
-        "title": "Senior Data Engineer - Cloud Data Platform (Snowflake & dbt)",
-        "url": "https://apply.workable.com/assist-rx/j/9AD710685A",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "3 hours ago",
-        "found_at": "2026-02-21 08:17"
-    },
-    {
-        "title": "Job Application for Sr. Data Engineer at Abacus Insights - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/abacusinsights/jobs/8424247002",
-        "company": "Abacus Insights",
-        "status": "Best_Archived",
-        "posted_at": "16 hours ago",
-        "found_at": "2026-02-21 06:28"
     }
 ]
