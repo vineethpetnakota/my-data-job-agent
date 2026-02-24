@@ -1,5 +1,29 @@
 [
     {
+        "title": "Job Application for Data Engineer at Cargomatic - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/cargomatic/jobs/5129940008",
+        "company": "Cargomatic",
+        "status": "New",
+        "posted_at": "7 hours ago",
+        "found_at": "2026-02-24 15:44"
+    },
+    {
+        "title": "Job Application for BI Developer at Adaugeo Healthcare Solutions",
+        "url": "https://job-boards.greenhouse.io/adaugeohealthcare/jobs/4146280009",
+        "company": "Adaugeo Healthcare Solutions",
+        "status": "New",
+        "posted_at": "3 hours ago",
+        "found_at": "2026-02-24 15:44"
+    },
+    {
+        "title": "Healthcare Data Analyst - Vatica Health - Application - Workable",
+        "url": "https://apply.workable.com/vatica-health/j/B3BEF4662E/apply/",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "3 hours ago",
+        "found_at": "2026-02-24 15:44"
+    },
+    {
         "title": "Data Product Owner | Qode | Jobs By Workable",
         "url": "https://jobs.workable.com/view/kUkABPJ2x7peKBTBxBibpb/hybrid-data-product-owner-in-texas-at-qode",
         "company": "US Company",
@@ -374,29 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "11 hours ago",
         "found_at": "2026-02-22 06:33"
-    },
-    {
-        "title": "Data Engineer - Grant Street Group - Lever",
-        "url": "https://jobs.lever.co/grantstreet/50b37d2c-be0d-4718-9ded-dafe63b03378",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "19 minutes ago",
-        "found_at": "2026-02-22 05:42"
-    },
-    {
-        "title": "Job Application for Senior Revenue Manager at Axon - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/axon/jobs/7638857003",
-        "company": "Axon",
-        "status": "Best_Archived",
-        "posted_at": "18 hours ago",
-        "found_at": "2026-02-22 05:42"
-    },
-    {
-        "title": "World Relief - Senior Corporate Accountant - 2025607 - Lever",
-        "url": "https://jobs.lever.co/wr/510a6ae6-5f35-41de-a971-0d68c4c6125a",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "5 hours ago",
-        "found_at": "2026-02-22 04:05"
     }
 ]
