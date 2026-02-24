@@ -1,5 +1,13 @@
 [
     {
+        "title": "Job Application for Data Engineer II at Axon - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/axon/jobs/7538015003",
+        "company": "Axon",
+        "status": "New",
+        "posted_at": "2 hours ago",
+        "found_at": "2026-02-24 10:36"
+    },
+    {
         "title": "Senior Marketing Data Scientist \u2013 Gaming Analytics - Greenhouse",
         "url": "https://job-boards.greenhouse.io/bpcs/jobs/7648656",
         "company": "US Company",
@@ -389,14 +397,6 @@
         "company": "US Company",
         "status": "Best_Archived",
         "posted_at": "8 hours ago",
-        "found_at": "2026-02-22 01:06"
-    },
-    {
-        "title": "Job Application for Data Engineer at Abacus Insights - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/abacusinsights/jobs/8420287002",
-        "company": "Abacus Insights",
-        "status": "Best_Archived",
-        "posted_at": "10 hours ago",
         "found_at": "2026-02-22 01:06"
     }
 ]
