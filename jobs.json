@@ -1,5 +1,37 @@
 [
     {
+        "title": "Job Application for Junior Data Analyst at Calibrate - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/calibratecareers/jobs/5811557004",
+        "company": "Calibrate",
+        "status": "New",
+        "posted_at": "32 minutes ago",
+        "found_at": "2026-02-24 21:24"
+    },
+    {
+        "title": "Job Application for Quantitative Data Analyst at The Florida Panthers",
+        "url": "https://job-boards.greenhouse.io/thefloridapanthers/jobs/4653116006?source=TeamWork&gh_src=teamwork",
+        "company": "The Florida Panthers",
+        "status": "New",
+        "posted_at": "4 hours ago",
+        "found_at": "2026-02-24 21:24"
+    },
+    {
+        "title": "AWS Data Engineer - Qode - Application - Workable",
+        "url": "https://apply.workable.com/qodeworld/j/F33200583B/apply/",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "10 hours ago",
+        "found_at": "2026-02-24 21:24"
+    },
+    {
+        "title": "Healthcare Data Analyst - Vatica Health - Workable",
+        "url": "https://apply.workable.com/vatica-health/j/B3BEF4662E/",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "13 hours ago",
+        "found_at": "2026-02-24 21:24"
+    },
+    {
         "title": "Job Application for HR Data Analyst, Fixed Term Contract at DeepMind",
         "url": "https://job-boards.greenhouse.io/deepmind/jobs/7649738",
         "company": "DeepMind",
@@ -366,37 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "10 hours ago",
         "found_at": "2026-02-22 22:12"
-    },
-    {
-        "title": "Data Engineer II - Platform Analytics - Kibana Platform - AppEx",
-        "url": "https://job-boards.greenhouse.io/referralsuseonly/jobs/7645497",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "5 minutes ago",
-        "found_at": "2026-02-22 20:13"
-    },
-    {
-        "title": "Hitachi Solutions Azure Data Architect (NA) | SmartRecruiters",
-        "url": "https://jobs.smartrecruiters.com/HitachiSolutions/744000109981215-azure-data-architect-na-",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "9 hours ago",
-        "found_at": "2026-02-22 18:19"
-    },
-    {
-        "title": "Hitachi Solutions MS D365 Senior CRM Consultant | SmartRecruiters",
-        "url": "https://jobs.smartrecruiters.com/HitachiSolutions/744000110303751",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "8 hours ago",
-        "found_at": "2026-02-22 18:19"
-    },
-    {
-        "title": "AbbVie Lead, SAP Customer Master Data & Analytics",
-        "url": "https://jobs.smartrecruiters.com/AbbVie/3743990011758275-lead-sap-customer-master-data-analytics",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "16 hours ago",
-        "found_at": "2026-02-22 16:16"
     }
 ]
