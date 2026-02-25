@@ -1,5 +1,29 @@
 [
     {
+        "title": "Job Application for Senior Analyst, Business Intelligence at OppFi",
+        "url": "https://job-boards.greenhouse.io/opploans/jobs/7643812003",
+        "company": "OppFi",
+        "status": "New",
+        "posted_at": "20 hours ago",
+        "found_at": "2026-02-25 18:49"
+    },
+    {
+        "title": "AWS Data Engineer | REE Medical - Jobs By Workable",
+        "url": "https://jobs.workable.com/view/6ctYV6jzGkPx38jENrCMY6/remote-aws-data-engineer-in-united-states-at-ree-medical",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "5 hours ago",
+        "found_at": "2026-02-25 18:49"
+    },
+    {
+        "title": "Associate Data Strategy Analyst | Prominence Advisors - Workable",
+        "url": "https://jobs.workable.com/view/mhrE5nUroVFJ8uJVJLRdcN/hybrid-associate-data-strategy-analyst-in-columbia-at-prominence-advisors",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "11 hours ago",
+        "found_at": "2026-02-25 18:49"
+    },
+    {
         "title": "Job Application for Healthcare Data Analyst at Machinify - Greenhouse",
         "url": "https://job-boards.greenhouse.io/machinifyinc/jobs/4146316009",
         "company": "Machinify",
@@ -374,29 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "3 hours ago",
         "found_at": "2026-02-24 15:44"
-    },
-    {
-        "title": "Data Product Owner | Qode | Jobs By Workable",
-        "url": "https://jobs.workable.com/view/kUkABPJ2x7peKBTBxBibpb/hybrid-data-product-owner-in-texas-at-qode",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "8 hours ago",
-        "found_at": "2026-02-24 14:03"
-    },
-    {
-        "title": "Product Management Intern - OnLogic - Jobs By Workable",
-        "url": "https://apply.workable.com/onlogic-inc/j/CA319C0874",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "17 hours ago",
-        "found_at": "2026-02-24 12:36"
-    },
-    {
-        "title": "Job Application for Data Engineer II at Axon - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/axon/jobs/7538015003",
-        "company": "Axon",
-        "status": "Best_Archived",
-        "posted_at": "2 hours ago",
-        "found_at": "2026-02-24 10:36"
     }
 ]
