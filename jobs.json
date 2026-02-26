@@ -1,5 +1,21 @@
 [
     {
+        "title": "Job Application for Senior Manager, Data Analyst at Flywheel Digital",
+        "url": "https://job-boards.greenhouse.io/flywheeldigital/jobs/5121126008?action=apply",
+        "company": "Flywheel Digital",
+        "status": "New",
+        "posted_at": "6 hours ago",
+        "found_at": "2026-02-26 17:50"
+    },
+    {
+        "title": "Microsoft Fabric Lead | Tiger Analytics Inc. | Jobs By Workable",
+        "url": "https://jobs.workable.com/view/jwmZwYwXX9U19gY48kUM4V/hybrid-microsoft-fabric-lead-in-dallas-at-tiger-analytics-inc.",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "15 hours ago",
+        "found_at": "2026-02-26 17:50"
+    },
+    {
         "title": "GCP Data Engineer | Zone IT Solutions | Jobs By Workable",
         "url": "https://jobs.workable.com/view/ivznhDE58b2oo9BLGo8f1f/hybrid-gcp-data-engineer-in-houston-at-zone-it-solutions?utm_source=bandana",
         "company": "US Company",
@@ -382,21 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "18 minutes ago",
         "found_at": "2026-02-25 17:52"
-    },
-    {
-        "title": "Data Analyst - Spectrum Comm Inc - Jobs By Workable",
-        "url": "https://apply.workable.com/spectrum-comm-inc-1/j/0F05B6E95F/",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "22 hours ago",
-        "found_at": "2026-02-25 16:56"
-    },
-    {
-        "title": "CapTech Consulting Microsoft Power Platform Architect",
-        "url": "https://jobs.smartrecruiters.com/CapTechConsulting/744000111116193-microsoft-power-platform-architect",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "14 hours ago",
-        "found_at": "2026-02-25 15:49"
     }
 ]
