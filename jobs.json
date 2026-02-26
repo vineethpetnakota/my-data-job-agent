@@ -1,5 +1,37 @@
 [
     {
+        "title": "Olo - Business Data Analyst II",
+        "url": "https://jobs.lever.co/olo/b9b8265d-59b5-4769-af71-bc21a2607e8f/apply",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "3 hours ago",
+        "found_at": "2026-02-26 04:05"
+    },
+    {
+        "title": "Job Application for Senior Data Engineer at Digible - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/digible/jobs/5813282004",
+        "company": "Digible",
+        "status": "New",
+        "posted_at": "14 minutes ago",
+        "found_at": "2026-02-26 04:05"
+    },
+    {
+        "title": "Forward Deployed Data Analyst @ Reflow - Jobs",
+        "url": "https://jobs.ashbyhq.com/reflow/3329b275-3512-4a56-a280-3bd7df1b5a9d/application",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "6 hours ago",
+        "found_at": "2026-02-26 04:05"
+    },
+    {
+        "title": "Sr. Data Engineer - NinjaHoldings",
+        "url": "https://ninjaholdings.breezy.hr/p/4738ecfd9fcc-sr-data-engineer/apply",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "4 hours ago",
+        "found_at": "2026-02-26 04:05"
+    },
+    {
         "title": "Jobgether - Corporate Performance Management (CPM) - Lever",
         "url": "https://jobs.lever.co/jobgether/e47b5d04-50ee-4993-a560-0fd483a0363d",
         "company": "US Company",
@@ -365,38 +397,6 @@
         "company": "US Company",
         "status": "Best_Archived",
         "posted_at": "1 hour ago",
-        "found_at": "2026-02-25 01:09"
-    },
-    {
-        "title": "City of New York Data & Process Automate Intern | SmartRecruiters",
-        "url": "https://jobs.smartrecruiters.com/cityofnewyork/3743990011747331",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "7 hours ago",
-        "found_at": "2026-02-25 01:09"
-    },
-    {
-        "title": "CapTech Consulting Microsoft Power Platform Architect",
-        "url": "https://jobs.smartrecruiters.com/CapTechConsulting/744000111119435-microsoft-power-platform-architect",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "4 hours ago",
-        "found_at": "2026-02-25 01:09"
-    },
-    {
-        "title": "Data Analyst - Spectrum Comm Inc - Jobs By Workable",
-        "url": "https://apply.workable.com/spectrum-comm-inc-1/j/0F05B6E95F",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "4 hours ago",
-        "found_at": "2026-02-25 01:09"
-    },
-    {
-        "title": "Data Analytics Coordinator | Resource Innovations - Jobs By Workable",
-        "url": "https://jobs.workable.com/view/ixnsxjPQnt7baabQbPfFAa/remote-data-analytics-coordinator-in-boston-at-resource-innovations",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "4 hours ago",
         "found_at": "2026-02-25 01:09"
     }
 ]
