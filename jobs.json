@@ -1,5 +1,29 @@
 [
     {
+        "title": "Job Application for Data Analyst at Inspire11 - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/inspire11/jobs/7658481002",
+        "company": "Inspire11",
+        "status": "New",
+        "posted_at": "6 hours ago",
+        "found_at": "2026-02-26 08:33"
+    },
+    {
+        "title": "Data Engineer @ GovWorx - Jobs",
+        "url": "https://jobs.ashbyhq.com/govworx/39acc42e-c8a9-480c-9ae4-34a5466abbe1/application",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "38 minutes ago",
+        "found_at": "2026-02-26 08:33"
+    },
+    {
+        "title": "PowerBI Consultant - Dallas | Tiger Analytics Inc. | Jobs By Workable",
+        "url": "https://jobs.workable.com/view/jipDaAZn42cTQyh1UuS1vm/remote-powerbi-consultant---dallas-in-dallas-at-tiger-analytics-inc.",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "5 hours ago",
+        "found_at": "2026-02-26 08:33"
+    },
+    {
         "title": "Spotify - Data Engineer II - Gen AI - Music - Lever",
         "url": "https://jobs.lever.co/spotify/87ac8be9-799d-414f-b855-70a1cf2729b4?lever-source=LinkedInJobs",
         "company": "US Company",
@@ -374,29 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "20 hours ago",
         "found_at": "2026-02-25 07:43"
-    },
-    {
-        "title": "Data Analyst @ Academia.edu - Jobs",
-        "url": "https://jobs.ashbyhq.com/academia/6d33b0ef-7a69-4e59-91f2-2107bb262f16/application",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "2 hours ago",
-        "found_at": "2026-02-25 06:49"
-    },
-    {
-        "title": "Turner & Townsend Cost Trend Manager \u2013 Data Center Construction",
-        "url": "https://www.smartrecruiters.com/TurnerTownsend/744000111156473-cost-trend-manager-data-center-construction",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "8 hours ago",
-        "found_at": "2026-02-25 05:53"
-    },
-    {
-        "title": "Data Analyst @ Jump - Jobs",
-        "url": "https://jobs.ashbyhq.com/jump-app/b34281e0-9db7-4a85-9618-98bc2a5509f5/application",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "3 hours ago",
-        "found_at": "2026-02-25 04:09"
     }
 ]
