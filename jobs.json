@@ -1,5 +1,29 @@
 [
     {
+        "title": "Jobgether - Corporate Performance Management (CPM) - Lever",
+        "url": "https://jobs.lever.co/jobgether/e47b5d04-50ee-4993-a560-0fd483a0363d",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "3 hours ago",
+        "found_at": "2026-02-26 01:03"
+    },
+    {
+        "title": "Job Application for Sr. Web Analytics Developer at AXS - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/axs/jobs/8437909002",
+        "company": "AXS",
+        "status": "New",
+        "posted_at": "5 hours ago",
+        "found_at": "2026-02-26 01:03"
+    },
+    {
+        "title": "Consultant - Azure Data & AI | Coretek Services - Jobs By Workable",
+        "url": "https://jobs.workable.com/view/pirXbqrYPQ9xzGsbXHNUmS/remote-consultant---azure-data-%26-ai-in-united-states-at-coretek-services",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "21 hours ago",
+        "found_at": "2026-02-26 01:03"
+    },
+    {
         "title": "GSI & Alliances Business Intelligence Intern- West Coast",
         "url": "https://job-boards.greenhouse.io/commvault/jobs/5051630008",
         "company": "US Company",
@@ -374,29 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "4 hours ago",
         "found_at": "2026-02-25 01:09"
-    },
-    {
-        "title": "Senior Data Engineer - Qode - Application - Jobs By Workable",
-        "url": "https://apply.workable.com/qodeworld/j/A23E10787F/apply/",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "11 hours ago",
-        "found_at": "2026-02-25 01:09"
-    },
-    {
-        "title": "Data Analyst, Risk and Operational Performance @ Kraken - Jobs",
-        "url": "https://jobs.ashbyhq.com/kraken.com/b0dd816d-c0a5-4dea-bd84-f0a44307defb?departmentId=5f67bd79-103b-4ac1-8d79-952b45ea47c9",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "13 hours ago",
-        "found_at": "2026-02-24 21:26"
-    },
-    {
-        "title": "Job Application for Junior Data Analyst at Calibrate - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/calibratecareers/jobs/5811557004",
-        "company": "Calibrate",
-        "status": "Best_Archived",
-        "posted_at": "32 minutes ago",
-        "found_at": "2026-02-24 21:24"
     }
 ]
