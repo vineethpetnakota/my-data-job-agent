@@ -1,5 +1,29 @@
 [
     {
+        "title": "Job Application for Principal Data Engineer at Gemini - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/gemini/jobs/7350506",
+        "company": "Gemini",
+        "status": "New",
+        "posted_at": "19 hours ago",
+        "found_at": "2026-02-27 13:51"
+    },
+    {
+        "title": "Easy apply - Data Analyst - Human Services Management Corporation",
+        "url": "https://jobs.smartrecruiters.com/oneclick-ui/company/HSMC1/publication/fdef6bb3-db23-4f52-a61b-a2cc1f987f02?dcr_ci=HSMC1",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "1 hour ago",
+        "found_at": "2026-02-27 13:51"
+    },
+    {
+        "title": "Data Engineer - Credence - Application - Jobs By Workable",
+        "url": "https://apply.workable.com/credence/j/204FCE502E/apply/",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "3 hours ago",
+        "found_at": "2026-02-27 13:51"
+    },
+    {
         "title": "Job Application for Senior Data Engineer at AvidXchange, Inc.",
         "url": "https://job-boards.greenhouse.io/avidxchangeinc/jobs/5053688007",
         "company": "AvidXchange, Inc.",
@@ -374,29 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "9 hours ago",
         "found_at": "2026-02-26 05:49"
-    },
-    {
-        "title": "Job Application for CRM Data Analyst Intern at 1-800 Contacts",
-        "url": "https://job-boards.greenhouse.io/1800contacts/jobs/7602932",
-        "company": "1-800 Contacts",
-        "status": "Best_Archived",
-        "posted_at": "11 hours ago",
-        "found_at": "2026-02-26 05:49"
-    },
-    {
-        "title": "OceanaGold Exploration Geologist Database Administrator",
-        "url": "https://jobs.smartrecruiters.com/OceanaGold/744000111444796-exploration-geologist-database-administrator",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "6 hours ago",
-        "found_at": "2026-02-26 05:49"
-    },
-    {
-        "title": "Olo - Business Data Analyst II",
-        "url": "https://jobs.lever.co/olo/b9b8265d-59b5-4769-af71-bc21a2607e8f/apply",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "3 hours ago",
-        "found_at": "2026-02-26 04:05"
     }
 ]
