@@ -1,5 +1,21 @@
 [
     {
+        "title": "Job Application for Data Engineer, Contract at 66degrees",
+        "url": "https://job-boards.greenhouse.io/66degrees/jobs/5816360004",
+        "company": "66degrees",
+        "status": "New",
+        "posted_at": "5 hours ago",
+        "found_at": "2026-03-02 16:29"
+    },
+    {
+        "title": "Job Application for Pricing Data Analyst at Ivanti - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/a3c41b8b71eff8c4/jobs/7636637003",
+        "company": "Ivanti",
+        "status": "New",
+        "posted_at": "48 minutes ago",
+        "found_at": "2026-03-02 16:29"
+    },
+    {
         "title": "Sales Assistant | City Wide Facility Solutions - Jobs By Workable",
         "url": "https://jobs.workable.com/view/e4ovUNJhhWQw7zHqQJHBN3/sales-assistant-in-minneapolis-at-city-wide-facility-solutions",
         "company": "US Company",
@@ -382,21 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "6 hours ago",
         "found_at": "2026-03-01 01:11"
-    },
-    {
-        "title": "City of New York Business Data Analyst | SmartRecruiters",
-        "url": "https://jobs.smartrecruiters.com/CityOfNewYork/3743990011907906-business-data-analyst",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "7 hours ago",
-        "found_at": "2026-02-28 23:12"
-    },
-    {
-        "title": "Cents - Senior Data Analyst (Product & Engineering) - Lever",
-        "url": "https://jobs.lever.co/cents/25d09ff7-57d9-4b78-a179-8fc7cf85a7af",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "6 hours ago",
-        "found_at": "2026-02-28 22:12"
     }
 ]
