@@ -1,5 +1,13 @@
 [
     {
+        "title": "Job Application for Associate, Data Engineer at ICONIQ - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/iconiq/jobs/7621441",
+        "company": "ICONIQ",
+        "status": "New",
+        "posted_at": "10 hours ago",
+        "found_at": "2026-03-03 12:31"
+    },
+    {
         "title": "Strategic Sourcing Data Analyst @ Crusoe - Jobs",
         "url": "https://jobs.ashbyhq.com/Crusoe/cf79c92a-3895-4c8d-97a7-984dffc3222c/application",
         "company": "US Company",
@@ -390,13 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "7 hours ago",
         "found_at": "2026-03-01 21:12"
-    },
-    {
-        "title": "Jobgether - Sr. Data Warehouse Engineer (Azure, Snowflake) - Lever",
-        "url": "https://jobs.lever.co/jobgether/4f52b76d-44f1-4f02-8013-d9b9811155e2",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "2 minutes ago",
-        "found_at": "2026-03-01 20:13"
     }
 ]
