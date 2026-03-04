@@ -1,5 +1,21 @@
 [
     {
+        "title": "Job Application for Data Engineer at ROLLER - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/roller/jobs/5068695007",
+        "company": "ROLLER",
+        "status": "New",
+        "posted_at": "1 hour ago",
+        "found_at": "2026-03-04 14:30"
+    },
+    {
+        "title": "Renesas Electronics Associate Customer Service Rep",
+        "url": "https://jobs.smartrecruiters.com/RenesasElectronics/744000112483328-associate-customer-service-rep",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "7 hours ago",
+        "found_at": "2026-03-04 14:30"
+    },
+    {
         "title": "Job Application for Operations Analyst at Gas South - Greenhouse",
         "url": "https://job-boards.greenhouse.io/gassouth/jobs/7671020",
         "company": "Gas South",
@@ -382,21 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "5 hours ago",
         "found_at": "2026-03-02 23:14"
-    },
-    {
-        "title": "Semi Senior Power BI Developer with Python - LATAM",
-        "url": "https://jobs.workable.com/view/9b7KHaVwHs8tqq23DP9UMb/remote-semi-senior-power-bi-developer-with-python---latam---english-required-in-uruguay-at-dacodes",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "31 minutes ago",
-        "found_at": "2026-03-02 23:14"
-    },
-    {
-        "title": "Jobgether - Director, Regional Sales Ops - Lever",
-        "url": "https://jobs.lever.co/jobgether/69ba112f-592f-43c3-825c-59f96844d744",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "2 hours ago",
-        "found_at": "2026-03-02 22:17"
     }
 ]
