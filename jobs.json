@@ -1,5 +1,61 @@
 [
     {
+        "title": "Job Application for Data Analyst at ZERO TO THREE - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/zerotothree/jobs/5117329008",
+        "company": "ZERO TO THREE",
+        "status": "New",
+        "posted_at": "3 hours ago",
+        "found_at": "2026-03-04 03:57"
+    },
+    {
+        "title": "Business and Data Analyst (Healthcare) - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/abacusinsights/jobs/8444918002?gh_jid=8444918002",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "5 hours ago",
+        "found_at": "2026-03-04 03:57"
+    },
+    {
+        "title": "Financial Crimes Risk Data Analyst @ Rain - Jobs",
+        "url": "https://jobs.ashbyhq.com/rain/c6db1ace-2eb3-46c8-80ab-61ff00ab35a4/application",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "4 hours ago",
+        "found_at": "2026-03-04 03:57"
+    },
+    {
+        "title": "Product Marketing @ Matia - Jobs",
+        "url": "https://jobs.ashbyhq.com/matia/71bb0bed-d39c-4718-8e98-07ffa17204d7",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "2 hours ago",
+        "found_at": "2026-03-04 03:57"
+    },
+    {
+        "title": "City of New York Senior Data Analyst | SmartRecruiters",
+        "url": "https://jobs.smartrecruiters.com/CityOfNewYork/3743990011936269-senior-data-analyst",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "7 hours ago",
+        "found_at": "2026-03-04 03:57"
+    },
+    {
+        "title": "Data Engineer | KPI Solutions | Jobs By Workable",
+        "url": "https://jobs.workable.com/view/fyBWMXkFhhrTwhSJDnjFa2/hybrid-data-engineer-in-cincinnati-at-kpi-solutions",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "3 hours ago",
+        "found_at": "2026-03-04 03:57"
+    },
+    {
+        "title": "Lead Data Engineer (Architecture & Data Governance) - Aretum",
+        "url": "https://apply.workable.com/aretum/j/71B0561762",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "6 hours ago",
+        "found_at": "2026-03-04 03:57"
+    },
+    {
         "title": "Job Application for Lead Data Engineer at Procare Solutions",
         "url": "https://job-boards.greenhouse.io/procaresolutions/jobs/5138540008",
         "company": "Procare Solutions",
@@ -342,61 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "15 hours ago",
         "found_at": "2026-03-02 15:31"
-    },
-    {
-        "title": "Allata - Data Engineer (Databricks + Python + Azure) - Lever",
-        "url": "https://jobs.lever.co/Allata/e79ea2b8-4ed0-4b61-8ca7-3e14c6adcbf1/apply",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "2 hours ago",
-        "found_at": "2026-03-02 12:31"
-    },
-    {
-        "title": "Senior Data Analyst - Miratech - Smart Recruiters Jobs",
-        "url": "https://jobs.smartrecruiters.com/Miratech1/744000109955845-senior-data-analyst?oga=true&trid=8dc3fc18-7d27-474f-af15-47b783076ace",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "14 hours ago",
-        "found_at": "2026-03-02 12:31"
-    },
-    {
-        "title": "Stand Together - KIP Summer 2026 - Policy Data Analyst Intern - Lever",
-        "url": "https://jobs.lever.co/standtogether/722304ac-1db1-4f48-aa39-0d4faf10af7e/apply?lever-origin=applied&lever-source%5B%5D=Jobgether&utm_campaign=search&utm_medium=website",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "3 hours ago",
-        "found_at": "2026-03-02 09:36"
-    },
-    {
-        "title": "Data Analyst Internship Spring 2026 | Anne Klein Official - Workable",
-        "url": "https://jobs.workable.com/view/55EUEZCSMDzYQFYinNrzhK/data-analyst-internship-spring-2026-in-new-york-at-anne-klein-official",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "2 hours ago",
-        "found_at": "2026-03-02 09:36"
-    },
-    {
-        "title": "Penumbra - Director of Manufacturing, Data Systems - Lever",
-        "url": "https://jobs.lever.co/penumbrainc/7fbd5e0e-1076-4747-9cc3-48b1b03a4094/?lever-origin=applied&lever-source%5B%5D=LJN",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "14 hours ago",
-        "found_at": "2026-03-02 08:30"
-    },
-    {
-        "title": "Research Associate, Data Engineer - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/bridgewater89/jobs/8419121002",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "2 hours ago",
-        "found_at": "2026-03-02 07:41"
-    },
-    {
-        "title": "Financial Management Data Analyst | Avalore, LLC",
-        "url": "https://jobs.workable.com/view/mtD1JbXtdC9V5RcxvcpXqm/financial-management-data-analyst-in-arlington-at-avalore%2C-llc",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "16 hours ago",
-        "found_at": "2026-03-02 06:42"
     }
 ]
