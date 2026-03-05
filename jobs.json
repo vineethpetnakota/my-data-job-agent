@@ -1,5 +1,29 @@
 [
     {
+        "title": "Jobgether - Senior Data Analyst - Lever",
+        "url": "https://jobs.lever.co/jobgether/80968658-caae-433e-9445-1afd0ff12335",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "1 hour ago",
+        "found_at": "2026-03-05 22:19"
+    },
+    {
+        "title": "Senior Data Engineer @ JBS Dev - Jobs",
+        "url": "https://jobs.ashbyhq.com/jbs-dev/318d2e46-d3f4-41a3-ac76-5f28c134328e",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "2 hours ago",
+        "found_at": "2026-03-05 22:19"
+    },
+    {
+        "title": "Sr. Financial Planning & Analysis Analyst - Smart Recruiters Jobs",
+        "url": "https://jobs.smartrecruiters.com/NationalVision1/744000112765522-sr-financial-planning-analysis-analyst",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "22 hours ago",
+        "found_at": "2026-03-05 22:19"
+    },
+    {
         "title": "Microsoft Fabric Specialist / Data Warehouse Engineer - Greenhouse",
         "url": "https://job-boards.greenhouse.io/apexcompanies/jobs/5141198008",
         "company": "US Company",
@@ -374,29 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "3 hours ago",
         "found_at": "2026-03-04 20:21"
-    },
-    {
-        "title": "Eurofins Quality Assurance Manager - Environmental Lab Testing",
-        "url": "https://jobs.smartrecruiters.com/Eurofins/744000112523001-quality-assurance-manager-environmental-lab-testing-",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "21 hours ago",
-        "found_at": "2026-03-04 20:21"
-    },
-    {
-        "title": "Syngenta Group Order to Cash Coordinator North America",
-        "url": "https://jobs.smartrecruiters.com/SyngentaGroup/744000112425969-order-to-cash-coordinator-north-america",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "21 hours ago",
-        "found_at": "2026-03-04 20:21"
-    },
-    {
-        "title": "Job Application for BI Developer at Abacus Insights - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/abacusinsights/jobs/8416010002?gh_jid=8416010002?ref=employbl",
-        "company": "Abacus Insights",
-        "status": "Best_Archived",
-        "posted_at": "11 hours ago",
-        "found_at": "2026-03-04 19:30"
     }
 ]
