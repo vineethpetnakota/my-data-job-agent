@@ -1,5 +1,61 @@
 [
     {
+        "title": "Job Application for BI Developer at Abacus Insights - Greenhouse",
+        "url": "http://job-boards.greenhouse.io/abacusinsights/jobs/8416010002?gh_jid=8416010002%3Fref%3Demploybl",
+        "company": "Abacus Insights",
+        "status": "New",
+        "posted_at": "15 hours ago",
+        "found_at": "2026-03-05 04:01"
+    },
+    {
+        "title": "Job Application for Google Cloud Data Engineer at NMI - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/nmi/jobs/5135888008",
+        "company": "NMI",
+        "status": "New",
+        "posted_at": "7 hours ago",
+        "found_at": "2026-03-05 04:01"
+    },
+    {
+        "title": "ServiceNow Senior Risk Analyst - Technology - SmartRecruiters",
+        "url": "https://www.smartrecruiters.com/ServiceNow/744000112739158-senior-risk-analyst-technology",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "4 hours ago",
+        "found_at": "2026-03-05 04:01"
+    },
+    {
+        "title": "National Vision Sr. Financial Planning & Analysis Analyst",
+        "url": "https://www.smartrecruiters.com/NationalVision1/744000112765522-sr-financial-planning-analysis-analyst",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "4 hours ago",
+        "found_at": "2026-03-05 04:01"
+    },
+    {
+        "title": "Senior Data Engineer, Customer Engineering - Claritas Rx",
+        "url": "https://apply.workable.com/claritasrx/j/BCB96179DB/apply?s=BuiltInNationwide",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "14 hours ago",
+        "found_at": "2026-03-05 04:01"
+    },
+    {
+        "title": "Data Engineer - KPI Solutions - Application - Jobs By Workable",
+        "url": "https://apply.workable.com/kueckerpulseintegration/j/B4B70CD424/apply/",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "12 hours ago",
+        "found_at": "2026-03-05 04:01"
+    },
+    {
+        "title": "Data Engineer/Python Developer | Zifo - Jobs By Workable",
+        "url": "https://jobs.workable.com/view/d4nqtJJL36QcRXUHf7knAA/hybrid-data-engineer%2Fpython-developer-in-boston-at-zifo",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "14 hours ago",
+        "found_at": "2026-03-05 04:01"
+    },
+    {
         "title": "Jobgether - Operational Excellence Specialist - Lever",
         "url": "https://jobs.lever.co/jobgether/7af6c574-80a9-4838-a5e1-f805be9b1895",
         "company": "US Company",
@@ -342,61 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "9 minutes ago",
         "found_at": "2026-03-03 17:34"
-    },
-    {
-        "title": "Job Application for Senior Data Engineer at Federato - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/federato/jobs/5138805008",
-        "company": "Federato",
-        "status": "Best_Archived",
-        "posted_at": "14 hours ago",
-        "found_at": "2026-03-03 16:33"
-    },
-    {
-        "title": "ServiceNow Senior Partner GTM Sales Operations Analyst",
-        "url": "https://www.smartrecruiters.com/ServiceNow/744000112210986-senior-partner-gtm-sales-operations-analyst",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "2 hours ago",
-        "found_at": "2026-03-03 16:33"
-    },
-    {
-        "title": "Treace Vice President, Commercial Operations | SmartRecruiters",
-        "url": "https://www.smartrecruiters.com/Treace/744000112252227-vice-president-commercial-operations-",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "12 hours ago",
-        "found_at": "2026-03-03 14:35"
-    },
-    {
-        "title": "Job Application for Associate, Data Engineer at ICONIQ - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/iconiq/jobs/7621441",
-        "company": "ICONIQ",
-        "status": "Best_Archived",
-        "posted_at": "10 hours ago",
-        "found_at": "2026-03-03 12:31"
-    },
-    {
-        "title": "Strategic Sourcing Data Analyst @ Crusoe - Jobs",
-        "url": "https://jobs.ashbyhq.com/Crusoe/cf79c92a-3895-4c8d-97a7-984dffc3222c/application",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "12 hours ago",
-        "found_at": "2026-03-03 11:23"
-    },
-    {
-        "title": "Data Analyst, Finance & Revenue Operations - Curology - Application",
-        "url": "https://apply.workable.com/curology/j/46A84DECE8/apply/",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "1 hour ago",
-        "found_at": "2026-03-03 11:23"
-    },
-    {
-        "title": "Sales Operations Analyst - DISHER - Lever",
-        "url": "https://jobs.lever.co/disher/6042b396-22f5-4983-b0fc-3653da1bbc34",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "5 hours ago",
-        "found_at": "2026-03-03 10:27"
     }
 ]
