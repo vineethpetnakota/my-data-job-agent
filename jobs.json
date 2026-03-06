@@ -1,5 +1,37 @@
 [
     {
+        "title": "Jobgether - Sr Sales Manager - Lever",
+        "url": "https://jobs.lever.co/jobgether/cf44bf4c-128c-47cb-b150-54e5b911a48b",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "3 hours ago",
+        "found_at": "2026-03-06 03:58"
+    },
+    {
+        "title": "Data Analyst (SQL, Python, Streamlit) 4-MO Contract - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/outrider/jobs/5142832008",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "4 hours ago",
+        "found_at": "2026-03-06 03:58"
+    },
+    {
+        "title": "Sr. Data Analyst, Lifecycle Marketing - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/Chime/jobs/8445046002",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "4 hours ago",
+        "found_at": "2026-03-06 03:58"
+    },
+    {
+        "title": "Customer Success Manager - Guadalajara, MX) - FlexTal Staffing LLC",
+        "url": "https://apply.workable.com/flextal-staffing-llc/j/0F6FC4D054",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "8 hours ago",
+        "found_at": "2026-03-06 03:58"
+    },
+    {
         "title": "Jobgether - Senior Value Architect - Lever",
         "url": "https://jobs.lever.co/jobgether/9f77326a-3922-48fb-9b78-5b67a7ea4be1",
         "company": "US Company",
@@ -366,37 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "4 hours ago",
         "found_at": "2026-03-05 04:01"
-    },
-    {
-        "title": "Senior Data Engineer, Customer Engineering - Claritas Rx",
-        "url": "https://apply.workable.com/claritasrx/j/BCB96179DB/apply?s=BuiltInNationwide",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "14 hours ago",
-        "found_at": "2026-03-05 04:01"
-    },
-    {
-        "title": "Data Engineer - KPI Solutions - Application - Jobs By Workable",
-        "url": "https://apply.workable.com/kueckerpulseintegration/j/B4B70CD424/apply/",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "12 hours ago",
-        "found_at": "2026-03-05 04:01"
-    },
-    {
-        "title": "Data Engineer/Python Developer | Zifo - Jobs By Workable",
-        "url": "https://jobs.workable.com/view/d4nqtJJL36QcRXUHf7knAA/hybrid-data-engineer%2Fpython-developer-in-boston-at-zifo",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "14 hours ago",
-        "found_at": "2026-03-05 04:01"
-    },
-    {
-        "title": "Jobgether - Operational Excellence Specialist - Lever",
-        "url": "https://jobs.lever.co/jobgether/7af6c574-80a9-4838-a5e1-f805be9b1895",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "3 hours ago",
-        "found_at": "2026-03-05 01:05"
     }
 ]
