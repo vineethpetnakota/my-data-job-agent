@@ -1,5 +1,13 @@
 [
     {
+        "title": "Job Application for Data Engineer at ITS Logistics, LLC - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/itslogisticsllc/jobs/5143127008",
+        "company": "ITS Logistics, LLC",
+        "status": "New",
+        "posted_at": "6 hours ago",
+        "found_at": "2026-03-06 09:27"
+    },
+    {
         "title": "Senior Data Analyst @ Confido - Jobs",
         "url": "https://jobs.ashbyhq.com/confido/504762ef-b1dd-4001-9b4f-1e8c3fa153df/application",
         "company": "US Company",
@@ -390,13 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "20 hours ago",
         "found_at": "2026-03-05 07:34"
-    },
-    {
-        "title": "Job Application for Data Engineer/Scientist 3 at Black Duck Software ...",
-        "url": "https://job-boards.greenhouse.io/blackduck/jobs/5130263008?utm_source=bandana",
-        "company": "Black Duck Software ...",
-        "status": "Best_Archived",
-        "posted_at": "4 hours ago",
-        "found_at": "2026-03-05 06:36"
     }
 ]
