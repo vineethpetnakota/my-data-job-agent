@@ -1,5 +1,45 @@
 [
     {
+        "title": "Job Application for Data Engineer, Knowledge Graph at Point72",
+        "url": "https://job-boards.greenhouse.io/point72/jobs/8448917002",
+        "company": "Point72",
+        "status": "New",
+        "posted_at": "10 hours ago",
+        "found_at": "2026-03-07 03:49"
+    },
+    {
+        "title": "Job Application for Senior Data Engineer at Garner Health",
+        "url": "https://job-boards.greenhouse.io/garnerhealth/jobs/5820416004",
+        "company": "Garner Health",
+        "status": "New",
+        "posted_at": "3 hours ago",
+        "found_at": "2026-03-07 03:49"
+    },
+    {
+        "title": "Job Application for Data Analyst at Datavations - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/datavations/jobs/4799687101",
+        "company": "Datavations",
+        "status": "New",
+        "posted_at": "6 hours ago",
+        "found_at": "2026-03-07 03:49"
+    },
+    {
+        "title": "Easy apply - ICCIP Data Analyst - City of Philadelphia",
+        "url": "https://jobs.smartrecruiters.com/oneclick-ui/company/CityofPhiladelphia/publication/552d23b5-ce7b-4bd0-b45a-21902b5c6d7e?dcr_ci=CityofPhiladelphia",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "3 hours ago",
+        "found_at": "2026-03-07 03:49"
+    },
+    {
+        "title": "Data Architect / Data Analyst - Cesna Recruitment - Jobs By Workable",
+        "url": "https://apply.workable.com/cesna-group-2/j/1E8F97586E",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "12 hours ago",
+        "found_at": "2026-03-07 03:49"
+    },
+    {
         "title": "Job Application for Sr./Data Analyst at Ceribell, Inc - Greenhouse",
         "url": "https://job-boards.greenhouse.io/ceribell/jobs/5819918004",
         "company": "Ceribell, Inc",
@@ -358,45 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "20 hours ago",
         "found_at": "2026-03-05 23:43"
-    },
-    {
-        "title": "Jobgether - Senior Data Analyst - Lever",
-        "url": "https://jobs.lever.co/jobgether/80968658-caae-433e-9445-1afd0ff12335",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "1 hour ago",
-        "found_at": "2026-03-05 22:19"
-    },
-    {
-        "title": "Senior Data Engineer @ JBS Dev - Jobs",
-        "url": "https://jobs.ashbyhq.com/jbs-dev/318d2e46-d3f4-41a3-ac76-5f28c134328e",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "2 hours ago",
-        "found_at": "2026-03-05 22:19"
-    },
-    {
-        "title": "Sr. Financial Planning & Analysis Analyst - Smart Recruiters Jobs",
-        "url": "https://jobs.smartrecruiters.com/NationalVision1/744000112765522-sr-financial-planning-analysis-analyst",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "22 hours ago",
-        "found_at": "2026-03-05 22:19"
-    },
-    {
-        "title": "Microsoft Fabric Specialist / Data Warehouse Engineer - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/apexcompanies/jobs/5141198008",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "4 hours ago",
-        "found_at": "2026-03-05 21:23"
-    },
-    {
-        "title": "PPM Works, Inc Support Analyst | SmartRecruiters",
-        "url": "https://jobs.smartrecruiters.com/PPMWorksInc/744000112770098-support-analyst",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "17 hours ago",
-        "found_at": "2026-03-05 21:23"
     }
 ]
