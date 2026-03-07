@@ -1,5 +1,13 @@
 [
     {
+        "title": "Job Application for Data Engineer II at Garner Health - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/garnerhealth/jobs/5820417004",
+        "company": "Garner Health",
+        "status": "New",
+        "posted_at": "19 hours ago",
+        "found_at": "2026-03-07 17:11"
+    },
+    {
         "title": "Data Strategy Analyst | Prominence Advisors - Jobs By Workable",
         "url": "https://jobs.workable.com/view/7ARjHhK3Lx4J4vW7qgLRjL/hybrid-data-strategy-analyst-in-columbia-at-prominence-advisors",
         "company": "US Company",
@@ -390,13 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "6 hours ago",
         "found_at": "2026-03-06 09:27"
-    },
-    {
-        "title": "Senior Data Analyst @ Confido - Jobs",
-        "url": "https://jobs.ashbyhq.com/confido/504762ef-b1dd-4001-9b4f-1e8c3fa153df/application",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "2 hours ago",
-        "found_at": "2026-03-06 08:24"
     }
 ]
