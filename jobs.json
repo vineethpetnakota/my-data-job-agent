@@ -1,5 +1,21 @@
 [
     {
+        "title": "Job Application for Real World Data Analyst at Truveta - Greenhouse",
+        "url": "https://job-boards.greenhouse.io/truveta/jobs/5821336004",
+        "company": "Truveta",
+        "status": "New",
+        "posted_at": "22 hours ago",
+        "found_at": "2026-03-08 01:05"
+    },
+    {
+        "title": "Job Application for Senior Data Engineer at Launch Potato",
+        "url": "http://job-boards.greenhouse.io/launch2/jobs/5795688004",
+        "company": "Launch Potato",
+        "status": "New",
+        "posted_at": "10 hours ago",
+        "found_at": "2026-03-08 01:05"
+    },
+    {
         "title": "Job Application for Staff Data Engineer at Interwell Health",
         "url": "https://job-boards.greenhouse.io/interwellhealth/jobs/5122788008?gh_jid=5122788008",
         "company": "Interwell Health",
@@ -382,21 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "21 hours ago",
         "found_at": "2026-03-06 15:26"
-    },
-    {
-        "title": "Service Delivery Support Technician II - Smart Recruiters",
-        "url": "https://www.smartrecruiters.com/EnviriCorporation/744000113012047-service-delivery-support-technician-ii-",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "18 hours ago",
-        "found_at": "2026-03-06 15:26"
-    },
-    {
-        "title": "Senior Data Engineer (Costa Rica) @ JBS Dev - Jobs",
-        "url": "https://jobs.ashbyhq.com/jbs-dev/76bddbf1-4a6c-4f5e-ae48-2d5d60cb7385",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "15 hours ago",
-        "found_at": "2026-03-06 12:29"
     }
 ]
