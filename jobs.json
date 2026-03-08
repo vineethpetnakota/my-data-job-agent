@@ -1,5 +1,29 @@
 [
     {
+        "title": "Job Application for Operations Engineer (Space Planning) at SpaceX",
+        "url": "https://job-boards.greenhouse.io/spacex/jobs/8362961002?gh_jid=8362961002?ref=employbl",
+        "company": "SpaceX",
+        "status": "New",
+        "posted_at": "8 hours ago",
+        "found_at": "2026-03-08 06:29"
+    },
+    {
+        "title": "KMS Technology Senior Data Engineer (ETL/Python)",
+        "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000113318637-senior-data-engineer-etl-python-",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "21 hours ago",
+        "found_at": "2026-03-08 06:29"
+    },
+    {
+        "title": "Product Management Intern | OnLogic | Jobs By Workable",
+        "url": "https://jobs.workable.com/view/rhTtdTPbTrCvS6YAws8tyr/product-management-intern-in-cary-at-onlogic",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "9 hours ago",
+        "found_at": "2026-03-08 06:29"
+    },
+    {
         "title": "Bosch Group Working Student Data Scientist - SmartRecruiters Jobs",
         "url": "https://jobs.smartrecruiters.com/BoschGroup/744000113165592-working-student-data-scientist",
         "company": "US Company",
@@ -374,29 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "4 hours ago",
         "found_at": "2026-03-06 20:19"
-    },
-    {
-        "title": "Job Application for Data Engineer, Knowledge Graph at Point72",
-        "url": "https://job-boards.greenhouse.io/point72/jobs/8448917002?gh_jid=8448917002",
-        "company": "Point72",
-        "status": "Best_Archived",
-        "posted_at": "1 hour ago",
-        "found_at": "2026-03-06 19:26"
-    },
-    {
-        "title": "Job Application for Data Analyst - Power BI at Abacus Insights",
-        "url": "http://job-boards.greenhouse.io/abacusinsights/jobs/8415974002?gh_jid=8415974002%3Fref%3Demploybl",
-        "company": "Abacus Insights",
-        "status": "Best_Archived",
-        "posted_at": "3 hours ago",
-        "found_at": "2026-03-06 18:28"
-    },
-    {
-        "title": "NBCUniversal Programming Coordinator | SmartRecruiters",
-        "url": "https://jobs.smartrecruiters.com/NBCUniversal3/744000112996457-programming-coordinator",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "24 hours ago",
-        "found_at": "2026-03-06 18:28"
     }
 ]
