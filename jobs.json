@@ -1,5 +1,45 @@
 [
     {
+        "title": "Jobgether - Service Desk Analyst - Lever",
+        "url": "https://jobs.lever.co/jobgether/5dfdcf68-3e33-44b9-8b75-96c46f0892f1",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "3 hours ago",
+        "found_at": "2026-03-09 17:39"
+    },
+    {
+        "title": "Job Application for Business Intelligence & AI Analyst at RapidSOS",
+        "url": "https://job-boards.greenhouse.io/rapidsos/jobs/5072453007",
+        "company": "RapidSOS",
+        "status": "New",
+        "posted_at": "2 hours ago",
+        "found_at": "2026-03-09 17:39"
+    },
+    {
+        "title": "Job Application for Business Analyst - LMS Administrator at Ivanti",
+        "url": "https://job-boards.greenhouse.io/a3c41b8b71eff8c4/jobs/7655454003",
+        "company": "Ivanti",
+        "status": "New",
+        "posted_at": "2 hours ago",
+        "found_at": "2026-03-09 17:39"
+    },
+    {
+        "title": "Job Application for Business Analyst / Specialist at EQT Corporation",
+        "url": "https://job-boards.greenhouse.io/eqtcorporation/jobs/5141214008",
+        "company": "EQT Corporation",
+        "status": "New",
+        "posted_at": "2 hours ago",
+        "found_at": "2026-03-09 17:39"
+    },
+    {
+        "title": "Data Engineer Intern | Cornspring - Jobs By Workable",
+        "url": "https://jobs.workable.com/view/exLprAP7XoShQTBsgxwF9H/hybrid-data-engineer-intern-in-new-york-at-cornspring",
+        "company": "US Company",
+        "status": "New",
+        "posted_at": "3 hours ago",
+        "found_at": "2026-03-09 17:39"
+    },
+    {
         "title": "Bluelight Consulting - Data Engineer - Remote, Latin America - Lever",
         "url": "https://jobs.lever.co/bluelightconsulting/de729029-f903-440b-9e8a-02b37036ad04",
         "company": "US Company",
@@ -358,45 +398,5 @@
         "status": "Best_Archived",
         "posted_at": "12 hours ago",
         "found_at": "2026-03-07 20:13"
-    },
-    {
-        "title": "Job Application for Lead Data Engineer at Sigmoid - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/sigmoid/jobs/8452197002",
-        "company": "Sigmoid",
-        "status": "Best_Archived",
-        "posted_at": "19 hours ago",
-        "found_at": "2026-03-07 19:13"
-    },
-    {
-        "title": "Data Analyst Internship Spring 2026 - Anne Klein Official - Workable",
-        "url": "https://apply.workable.com/anne-klein-official/j/25ECA85A56",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "8 hours ago",
-        "found_at": "2026-03-07 18:18"
-    },
-    {
-        "title": "Job Application for Data Engineer II at Garner Health - Greenhouse",
-        "url": "https://job-boards.greenhouse.io/garnerhealth/jobs/5820417004",
-        "company": "Garner Health",
-        "status": "Best_Archived",
-        "posted_at": "19 hours ago",
-        "found_at": "2026-03-07 17:11"
-    },
-    {
-        "title": "Data Strategy Analyst | Prominence Advisors - Jobs By Workable",
-        "url": "https://jobs.workable.com/view/7ARjHhK3Lx4J4vW7qgLRjL/hybrid-data-strategy-analyst-in-columbia-at-prominence-advisors",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "3 hours ago",
-        "found_at": "2026-03-07 15:12"
-    },
-    {
-        "title": "Backend Developer (Data Engineer) with Python/Node - TS/SCI w",
-        "url": "https://apply.workable.com/leading-path-consulting/j/F6569491EC/apply/",
-        "company": "US Company",
-        "status": "Best_Archived",
-        "posted_at": "20 hours ago",
-        "found_at": "2026-03-07 15:12"
     }
 ]
